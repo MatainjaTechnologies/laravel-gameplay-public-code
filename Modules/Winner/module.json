@@ -1,0 +1,13 @@
+{
+    "name": "Winner",
+    "alias": "winner",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Winner\\Providers\\WinnerServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

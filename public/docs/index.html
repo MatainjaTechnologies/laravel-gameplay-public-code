@@ -1,0 +1,2608 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>The gemezz API</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css" media="screen" />
+        <link rel="stylesheet" href="css/print.css" media="print" />
+        <script src="js/all.js"></script>
+
+        <link rel="stylesheet" href="css/highlight-darcula.css" media="" />
+        <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="" data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+<a href="#" id="nav-button">
+      <span>
+        NAV
+            <img src="images/navbar.png" alt="-image" class=""/>
+      </span>
+</a>
+<div class="tocify-wrapper">
+                <div class="lang-selector">
+                            <a href="#" data-language-name="bash">bash</a>
+                            <a href="#" data-language-name="javascript">javascript</a>
+                    </div>
+        <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+    <ul class="search-results"></ul>
+
+    <ul id="toc">
+    </ul>
+
+            <ul class="toc-footer" id="toc-footer">
+                            <li><a href="./collection.json">View Postman collection</a></li>
+                            <li><a href="./openapi.yaml">View OpenAPI (Swagger) spec</a></li>
+                            <li><a href='http://github.com/knuckleswtf/scribe'>Documentation powered by Scribe ✍</a></li>
+                    </ul>
+            <ul class="toc-footer" id="last-updated">
+            <li>Last updated: October 18 2021</li>
+        </ul>
+</div>
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1>Introduction</h1>
+<p>This documentation aims to provide all the information you need to work with our API.</p>
+<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+<script>
+    var baseUrl = "http://gemezz.code-dev.in";
+</script>
+<script src="js/tryitout-2.7.10.js"></script>
+<blockquote>
+<p>Base URL</p>
+</blockquote>
+<pre><code class="language-yaml">http://gemezz.code-dev.in</code></pre><h1>Authenticating requests</h1>
+<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
+<p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p><h1>Endpoints</h1>
+<h2>api/utpal</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/utpal" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/utpal"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETapi-utpal" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-utpal"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-utpal"></code></pre>
+</div>
+<div id="execution-error-GETapi-utpal" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-utpal"></code></pre>
+</div>
+<form id="form-GETapi-utpal" data-method="GET" data-path="api/utpal" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-utpal', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-utpal" onclick="tryItOut('GETapi-utpal');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-utpal" onclick="cancelTryOut('GETapi-utpal');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-utpal" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/utpal</code></b>
+</p>
+</form>
+<h2>api/healthcheck</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/healthcheck" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/healthcheck"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "status": "up",
+    "services": {
+        "database": "up",
+        "redis": "up"
+    }
+}</code></pre>
+<div id="execution-results-GETapi-healthcheck" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-healthcheck"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-healthcheck"></code></pre>
+</div>
+<div id="execution-error-GETapi-healthcheck" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-healthcheck"></code></pre>
+</div>
+<form id="form-GETapi-healthcheck" data-method="GET" data-path="api/healthcheck" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-healthcheck', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-healthcheck" onclick="tryItOut('GETapi-healthcheck');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-healthcheck" onclick="cancelTryOut('GETapi-healthcheck');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-healthcheck" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/healthcheck</code></b>
+</p>
+</form>
+<h2>api/activity</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/activity" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/activity"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETapi-activity" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-activity"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-activity"></code></pre>
+</div>
+<div id="execution-error-GETapi-activity" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-activity"></code></pre>
+</div>
+<form id="form-GETapi-activity" data-method="GET" data-path="api/activity" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-activity', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-activity" onclick="tryItOut('GETapi-activity');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-activity" onclick="cancelTryOut('GETapi-activity');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-activity" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/activity</code></b>
+</p>
+</form>
+<h2>api/admin</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/admin" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/admin"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETapi-admin" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-admin"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-admin"></code></pre>
+</div>
+<div id="execution-error-GETapi-admin" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-admin"></code></pre>
+</div>
+<form id="form-GETapi-admin" data-method="GET" data-path="api/admin" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-admin', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-admin" onclick="tryItOut('GETapi-admin');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-admin" onclick="cancelTryOut('GETapi-admin');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-admin" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/admin</code></b>
+</p>
+</form>
+<h2>api/banner</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/banner" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/banner"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETapi-banner" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-banner"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-banner"></code></pre>
+</div>
+<div id="execution-error-GETapi-banner" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-banner"></code></pre>
+</div>
+<form id="form-GETapi-banner" data-method="GET" data-path="api/banner" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-banner', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-banner" onclick="tryItOut('GETapi-banner');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-banner" onclick="cancelTryOut('GETapi-banner');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-banner" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/banner</code></b>
+</p>
+</form>
+<h2>api/category</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/category" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/category"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (500):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Too few arguments to function Modules\\Category\\Http\\Controllers\\CategoryApiController::category(), 0 passed in D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php on line 54 and exactly 1 expected",
+    "exception": "ArgumentCountError",
+    "file": "D:\\Matainja\\module-laravel-gemmezz\\Modules\\Category\\Http\\Controllers\\CategoryApiController.php",
+    "line": 34,
+    "trace": [
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+            "line": 54,
+            "function": "category",
+            "class": "Modules\\Category\\Http\\Controllers\\CategoryApiController",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+            "line": 45,
+            "function": "callAction",
+            "class": "Illuminate\\Routing\\Controller",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 239,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\ControllerDispatcher",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 196,
+            "function": "runController",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 685,
+            "function": "run",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 128,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "line": 59,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 103,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 687,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 662,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 628,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 617,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 165,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 128,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 63,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
+            "line": 52,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Fruitcake\\Cors\\HandleCors",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 103,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 140,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 109,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 324,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 305,
+            "function": "callLaravelOrLumenRoute",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 76,
+            "function": "makeApiCall",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 51,
+            "function": "makeResponseCall",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 41,
+            "function": "makeResponseCallIfEnabledAndNoSuccessResponses",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "line": 236,
+            "function": "__invoke",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "line": 172,
+            "function": "iterateThroughStrategies",
+            "class": "Knuckles\\Scribe\\Extracting\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "line": 127,
+            "function": "fetchResponses",
+            "class": "Knuckles\\Scribe\\Extracting\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "line": 119,
+            "function": "processRoute",
+            "class": "Knuckles\\Scribe\\Extracting\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "line": 73,
+            "function": "processRoutes",
+            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 36,
+            "function": "handle",
+            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
+            "line": 37,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 93,
+            "function": "unwrapIfClosure",
+            "class": "Illuminate\\Container\\Util",
+            "type": "::"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 37,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 596,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 134,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 299,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 121,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\symfony\\console\\Application.php",
+            "line": 978,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\symfony\\console\\Application.php",
+            "line": 295,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\symfony\\console\\Application.php",
+            "line": 167,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 93,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 129,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "-&gt;"
+        }
+    ]
+}</code></pre>
+<div id="execution-results-GETapi-category" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-category"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-category"></code></pre>
+</div>
+<div id="execution-error-GETapi-category" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-category"></code></pre>
+</div>
+<form id="form-GETapi-category" data-method="GET" data-path="api/category" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-category', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-category" onclick="tryItOut('GETapi-category');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-category" onclick="cancelTryOut('GETapi-category');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-category" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/category</code></b>
+</p>
+</form>
+<h2>api/category/{id}/game</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/category/vel/game" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/category/vel/game"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "title": "The gemezz API",
+    "Accept": "application\/json",
+    "match": {
+        "prefixes": [
+            "api\/*"
+        ],
+        "domains": [
+            "*"
+        ]
+    },
+    "0": {
+        "current_page": 1,
+        "data": [],
+        "first_page_url": "http:\/\/localhost\/api\/category\/vel\/game?page=1",
+        "from": null,
+        "next_page_url": null,
+        "path": "http:\/\/localhost\/api\/category\/vel\/game",
+        "per_page": 10,
+        "prev_page_url": null,
+        "to": null
+    }
+}</code></pre>
+<div id="execution-results-GETapi-category--id--game" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-category--id--game"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-category--id--game"></code></pre>
+</div>
+<div id="execution-error-GETapi-category--id--game" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-category--id--game"></code></pre>
+</div>
+<form id="form-GETapi-category--id--game" data-method="GET" data-path="api/category/{id}/game" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-category--id--game', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-category--id--game" onclick="tryItOut('GETapi-category--id--game');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-category--id--game" onclick="cancelTryOut('GETapi-category--id--game');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-category--id--game" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/category/{id}/game</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="id" data-endpoint="GETapi-category--id--game" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+<h2>api/competition</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/competition" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/competition"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "soon_competitions": [],
+    "finish_competitions": {
+        "current_page": 1,
+        "data": [
+            {
+                "id": 1,
+                "id_competitiongame": 6,
+                "competition_type": 1,
+                "prize_image1": "00982_sunsetcelebration_1920x1200.jpg",
+                "prize_coins1": 23,
+                "prize_image2": "2005-05-30-1920x1200.jpg",
+                "prize_coins2": 33,
+                "prize_image3": "4.jpg",
+                "prize_coins3": 44,
+                "start_date": "2021-09-08",
+                "end_date": "2021-09-08",
+                "created_at": "2021-09-08T07:02:57.000000Z",
+                "updated_at": "2021-09-16T06:52:55.000000Z",
+                "banner_image": "2in-ci2_js1a.jpg",
+                "is_deleted": 1,
+                "game_id": 6,
+                "game_uuid": "7b1a14fa-043f-4f18-8b74-2d26574d27ef",
+                "game_name": "sanjoy jana",
+                "game_category": 5,
+                "game_desc": "wer",
+                "game_rule": "fgh",
+                "game_image": "0",
+                "game_url": "hgfadsadd",
+                "category_name": {
+                    "category_name": "fghjk"
+                }
+            },
+            {
+                "id": 2,
+                "id_competitiongame": 5,
+                "competition_type": 2,
+                "prize_image1": "00982_sunsetcelebration_1920x1200.jpg",
+                "prize_coins1": 11,
+                "prize_image2": "2005-05-30-1920x1200.jpg",
+                "prize_coins2": 22,
+                "prize_image3": "4.jpg",
+                "prize_coins3": 33,
+                "start_date": "2021-09-14",
+                "end_date": "2021-09-14",
+                "created_at": "2021-09-08T07:14:33.000000Z",
+                "updated_at": "2021-09-08T07:14:33.000000Z",
+                "banner_image": "Flag-of-India-300x200.gif",
+                "is_deleted": null,
+                "game_id": 5,
+                "game_uuid": "b9f43919-145b-4efb-b1a1-23c7cb7e1ff3",
+                "game_name": "Avijiqwerty",
+                "game_category": 5,
+                "game_desc": "xcvbn",
+                "game_rule": "xchj",
+                "game_image": "0",
+                "game_url": "sdfgh",
+                "category_name": {
+                    "category_name": "fghjk"
+                }
+            },
+            {
+                "id": 3,
+                "id_competitiongame": 6,
+                "competition_type": 1,
+                "prize_image1": "00982_sunsetcelebration_1920x1200.jpg",
+                "prize_coins1": 11,
+                "prize_image2": "4.jpg",
+                "prize_coins2": 22,
+                "prize_image3": "2005-05-30-1920x1200.jpg",
+                "prize_coins3": 33,
+                "start_date": "2021-09-15",
+                "end_date": "2021-09-15",
+                "created_at": "2021-09-08T07:15:28.000000Z",
+                "updated_at": "2021-09-10T10:52:20.000000Z",
+                "banner_image": "Flag-of-India-300x200.gif",
+                "is_deleted": null,
+                "game_id": 6,
+                "game_uuid": "7b1a14fa-043f-4f18-8b74-2d26574d27ef",
+                "game_name": "sanjoy jana",
+                "game_category": 5,
+                "game_desc": "wer",
+                "game_rule": "fgh",
+                "game_image": "0",
+                "game_url": "hgfadsadd",
+                "category_name": {
+                    "category_name": "fghjk"
+                }
+            },
+            {
+                "id": 4,
+                "id_competitiongame": 20,
+                "competition_type": 2,
+                "prize_image1": "icon_cat_puzzle.png",
+                "prize_coins1": 44,
+                "prize_image2": "What-is-image-resolution-all-about-and-how-can-I-change-DPI-in-MS-Paint2.jpg",
+                "prize_coins2": 33,
+                "prize_image3": "Naam-Limits-of-Earth-Part1-001-earth-600x600.jpg",
+                "prize_coins3": 11,
+                "start_date": "2021-09-11",
+                "end_date": "2021-09-13",
+                "created_at": "2021-09-10T05:02:20.000000Z",
+                "updated_at": "2021-09-10T05:02:20.000000Z",
+                "banner_image": "Flag-of-India-300x200.gif",
+                "is_deleted": null,
+                "game_id": null,
+                "game_uuid": null,
+                "game_name": null,
+                "game_category": null,
+                "game_desc": null,
+                "game_rule": null,
+                "game_image": null,
+                "game_url": null,
+                "category_name": null
+            }
+        ],
+        "first_page_url": "http:\/\/localhost\/api\/competition?page=1",
+        "from": 1,
+        "next_page_url": null,
+        "path": "http:\/\/localhost\/api\/competition",
+        "per_page": 5,
+        "prev_page_url": null,
+        "to": 4
+    },
+    "current_competitions": [
+        {
+            "id": 1,
+            "id_competitiongame": 6,
+            "competition_type": 1,
+            "prize_image1": "00982_sunsetcelebration_1920x1200.jpg",
+            "prize_coins1": 23,
+            "prize_image2": "2005-05-30-1920x1200.jpg",
+            "prize_coins2": 33,
+            "prize_image3": "4.jpg",
+            "prize_coins3": 44,
+            "start_date": "2021-09-08",
+            "end_date": "2021-09-08",
+            "created_at": "2021-09-08T07:02:57.000000Z",
+            "updated_at": "2021-09-16T06:52:55.000000Z",
+            "banner_image": "2in-ci2_js1a.jpg",
+            "is_deleted": 1,
+            "game_id": 6,
+            "game_uuid": "7b1a14fa-043f-4f18-8b74-2d26574d27ef",
+            "game_name": "sanjoy jana",
+            "game_category": 5,
+            "game_desc": "wer",
+            "game_rule": "fgh",
+            "game_image": "0",
+            "game_url": "hgfadsadd",
+            "category_name": {
+                "category_name": "fghjk"
+            }
+        },
+        {
+            "id": 2,
+            "id_competitiongame": 5,
+            "competition_type": 2,
+            "prize_image1": "00982_sunsetcelebration_1920x1200.jpg",
+            "prize_coins1": 11,
+            "prize_image2": "2005-05-30-1920x1200.jpg",
+            "prize_coins2": 22,
+            "prize_image3": "4.jpg",
+            "prize_coins3": 33,
+            "start_date": "2021-09-14",
+            "end_date": "2021-09-14",
+            "created_at": "2021-09-08T07:14:33.000000Z",
+            "updated_at": "2021-09-08T07:14:33.000000Z",
+            "banner_image": "Flag-of-India-300x200.gif",
+            "is_deleted": null,
+            "game_id": 5,
+            "game_uuid": "b9f43919-145b-4efb-b1a1-23c7cb7e1ff3",
+            "game_name": "Avijiqwerty",
+            "game_category": 5,
+            "game_desc": "xcvbn",
+            "game_rule": "xchj",
+            "game_image": "0",
+            "game_url": "sdfgh",
+            "category_name": {
+                "category_name": "fghjk"
+            }
+        },
+        {
+            "id": 3,
+            "id_competitiongame": 6,
+            "competition_type": 1,
+            "prize_image1": "00982_sunsetcelebration_1920x1200.jpg",
+            "prize_coins1": 11,
+            "prize_image2": "4.jpg",
+            "prize_coins2": 22,
+            "prize_image3": "2005-05-30-1920x1200.jpg",
+            "prize_coins3": 33,
+            "start_date": "2021-09-15",
+            "end_date": "2021-09-15",
+            "created_at": "2021-09-08T07:15:28.000000Z",
+            "updated_at": "2021-09-10T10:52:20.000000Z",
+            "banner_image": "Flag-of-India-300x200.gif",
+            "is_deleted": null,
+            "game_id": 6,
+            "game_uuid": "7b1a14fa-043f-4f18-8b74-2d26574d27ef",
+            "game_name": "sanjoy jana",
+            "game_category": 5,
+            "game_desc": "wer",
+            "game_rule": "fgh",
+            "game_image": "0",
+            "game_url": "hgfadsadd",
+            "category_name": {
+                "category_name": "fghjk"
+            }
+        },
+        {
+            "id": 4,
+            "id_competitiongame": 20,
+            "competition_type": 2,
+            "prize_image1": "icon_cat_puzzle.png",
+            "prize_coins1": 44,
+            "prize_image2": "What-is-image-resolution-all-about-and-how-can-I-change-DPI-in-MS-Paint2.jpg",
+            "prize_coins2": 33,
+            "prize_image3": "Naam-Limits-of-Earth-Part1-001-earth-600x600.jpg",
+            "prize_coins3": 11,
+            "start_date": "2021-09-11",
+            "end_date": "2021-09-13",
+            "created_at": "2021-09-10T05:02:20.000000Z",
+            "updated_at": "2021-09-10T05:02:20.000000Z",
+            "banner_image": "Flag-of-India-300x200.gif",
+            "is_deleted": null,
+            "game_id": null,
+            "game_uuid": null,
+            "game_name": null,
+            "game_category": null,
+            "game_desc": null,
+            "game_rule": null,
+            "game_image": null,
+            "game_url": null,
+            "category_name": null
+        }
+    ]
+}</code></pre>
+<div id="execution-results-GETapi-competition" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-competition"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-competition"></code></pre>
+</div>
+<div id="execution-error-GETapi-competition" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-competition"></code></pre>
+</div>
+<form id="form-GETapi-competition" data-method="GET" data-path="api/competition" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-competition', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-competition" onclick="tryItOut('GETapi-competition');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-competition" onclick="cancelTryOut('GETapi-competition');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-competition" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/competition</code></b>
+</p>
+</form>
+<h2>api/content</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/content" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/content"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETapi-content" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-content"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-content"></code></pre>
+</div>
+<div id="execution-error-GETapi-content" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-content"></code></pre>
+</div>
+<form id="form-GETapi-content" data-method="GET" data-path="api/content" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-content', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-content" onclick="tryItOut('GETapi-content');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-content" onclick="cancelTryOut('GETapi-content');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-content" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/content</code></b>
+</p>
+</form>
+<h2>api/domain</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/domain" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/domain"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETapi-domain" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-domain"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-domain"></code></pre>
+</div>
+<div id="execution-error-GETapi-domain" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-domain"></code></pre>
+</div>
+<form id="form-GETapi-domain" data-method="GET" data-path="api/domain" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-domain', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-domain" onclick="tryItOut('GETapi-domain');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-domain" onclick="cancelTryOut('GETapi-domain');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-domain" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/domain</code></b>
+</p>
+</form>
+<h2>api/getgamesbycategory/{id}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/getgamesbycategory/enim" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/getgamesbycategory/enim"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">
+[]</code></pre>
+<div id="execution-results-GETapi-getgamesbycategory--id-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-getgamesbycategory--id-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-getgamesbycategory--id-"></code></pre>
+</div>
+<div id="execution-error-GETapi-getgamesbycategory--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-getgamesbycategory--id-"></code></pre>
+</div>
+<form id="form-GETapi-getgamesbycategory--id-" data-method="GET" data-path="api/getgamesbycategory/{id}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-getgamesbycategory--id-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-getgamesbycategory--id-" onclick="tryItOut('GETapi-getgamesbycategory--id-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-getgamesbycategory--id-" onclick="cancelTryOut('GETapi-getgamesbycategory--id-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-getgamesbycategory--id-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/getgamesbycategory/{id}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="id" data-endpoint="GETapi-getgamesbycategory--id-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+<h2>api/game/{uuid}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/game/quibusdam" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/game/quibusdam"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-GETapi-game--uuid-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-game--uuid-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-game--uuid-"></code></pre>
+</div>
+<div id="execution-error-GETapi-game--uuid-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-game--uuid-"></code></pre>
+</div>
+<form id="form-GETapi-game--uuid-" data-method="GET" data-path="api/game/{uuid}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-game--uuid-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-game--uuid-" onclick="tryItOut('GETapi-game--uuid-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-game--uuid-" onclick="cancelTryOut('GETapi-game--uuid-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-game--uuid-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/game/{uuid}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>uuid</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="uuid" data-endpoint="GETapi-game--uuid-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+<h2>api/competition/{id}/game/{uuid}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/competition/sed/game/impedit" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/competition/sed/game/impedit"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (500):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Attempt to read property \"category_id\" on null",
+    "exception": "ErrorException",
+    "file": "D:\\Matainja\\module-laravel-gemmezz\\Modules\\Game\\Http\\Controllers\\GameApiController.php",
+    "line": 28,
+    "trace": [
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\Modules\\Game\\Http\\Controllers\\GameApiController.php",
+            "line": 28,
+            "function": "handleError",
+            "class": "Illuminate\\Foundation\\Bootstrap\\HandleExceptions",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+            "line": 54,
+            "function": "comp_game_details",
+            "class": "Modules\\Game\\Http\\Controllers\\GameApiController",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+            "line": 45,
+            "function": "callAction",
+            "class": "Illuminate\\Routing\\Controller",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 239,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\ControllerDispatcher",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 196,
+            "function": "runController",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 685,
+            "function": "run",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 128,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "line": 59,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 103,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 687,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 662,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 628,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 617,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 165,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 128,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 63,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
+            "line": 52,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Fruitcake\\Cors\\HandleCors",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 103,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 140,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 109,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 324,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 305,
+            "function": "callLaravelOrLumenRoute",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 76,
+            "function": "makeApiCall",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 51,
+            "function": "makeResponseCall",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 41,
+            "function": "makeResponseCallIfEnabledAndNoSuccessResponses",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "line": 236,
+            "function": "__invoke",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "line": 172,
+            "function": "iterateThroughStrategies",
+            "class": "Knuckles\\Scribe\\Extracting\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "line": 127,
+            "function": "fetchResponses",
+            "class": "Knuckles\\Scribe\\Extracting\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "line": 119,
+            "function": "processRoute",
+            "class": "Knuckles\\Scribe\\Extracting\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "line": 73,
+            "function": "processRoutes",
+            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 36,
+            "function": "handle",
+            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
+            "line": 37,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 93,
+            "function": "unwrapIfClosure",
+            "class": "Illuminate\\Container\\Util",
+            "type": "::"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 37,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 596,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 134,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 299,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 121,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\symfony\\console\\Application.php",
+            "line": 978,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\symfony\\console\\Application.php",
+            "line": 295,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\symfony\\console\\Application.php",
+            "line": 167,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 93,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 129,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "-&gt;"
+        }
+    ]
+}</code></pre>
+<div id="execution-results-GETapi-competition--id--game--uuid-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-competition--id--game--uuid-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-competition--id--game--uuid-"></code></pre>
+</div>
+<div id="execution-error-GETapi-competition--id--game--uuid-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-competition--id--game--uuid-"></code></pre>
+</div>
+<form id="form-GETapi-competition--id--game--uuid-" data-method="GET" data-path="api/competition/{id}/game/{uuid}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-competition--id--game--uuid-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-competition--id--game--uuid-" onclick="tryItOut('GETapi-competition--id--game--uuid-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-competition--id--game--uuid-" onclick="cancelTryOut('GETapi-competition--id--game--uuid-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-competition--id--game--uuid-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/competition/{id}/game/{uuid}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="id" data-endpoint="GETapi-competition--id--game--uuid-" data-component="url" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>uuid</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="uuid" data-endpoint="GETapi-competition--id--game--uuid-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+<h2>api/language</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/language" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/language"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETapi-language" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-language"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-language"></code></pre>
+</div>
+<div id="execution-error-GETapi-language" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-language"></code></pre>
+</div>
+<form id="form-GETapi-language" data-method="GET" data-path="api/language" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-language', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-language" onclick="tryItOut('GETapi-language');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-language" onclick="cancelTryOut('GETapi-language');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-language" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/language</code></b>
+</p>
+</form>
+<h2>api/notification</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/notification" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/notification"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETapi-notification" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-notification"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-notification"></code></pre>
+</div>
+<div id="execution-error-GETapi-notification" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-notification"></code></pre>
+</div>
+<form id="form-GETapi-notification" data-method="GET" data-path="api/notification" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-notification', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-notification" onclick="tryItOut('GETapi-notification');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-notification" onclick="cancelTryOut('GETapi-notification');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-notification" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/notification</code></b>
+</p>
+</form>
+<h2>api/notify</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/notify" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/notify"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETapi-notify" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-notify"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-notify"></code></pre>
+</div>
+<div id="execution-error-GETapi-notify" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-notify"></code></pre>
+</div>
+<form id="form-GETapi-notify" data-method="GET" data-path="api/notify" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-notify', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-notify" onclick="tryItOut('GETapi-notify');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-notify" onclick="cancelTryOut('GETapi-notify');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-notify" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/notify</code></b>
+</p>
+</form>
+<h2>api/page</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/page" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/page"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETapi-page" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-page"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-page"></code></pre>
+</div>
+<div id="execution-error-GETapi-page" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-page"></code></pre>
+</div>
+<form id="form-GETapi-page" data-method="GET" data-path="api/page" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-page', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-page" onclick="tryItOut('GETapi-page');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-page" onclick="cancelTryOut('GETapi-page');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-page" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/page</code></b>
+</p>
+</form>
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/cat/game" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/cat/game"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (500):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Attempt to read property \"name\" on null",
+    "exception": "ErrorException",
+    "file": "D:\\Matainja\\module-laravel-gemmezz\\Modules\\Page\\Http\\Controllers\\HomeApiController.php",
+    "line": 35,
+    "trace": [
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\Modules\\Page\\Http\\Controllers\\HomeApiController.php",
+            "line": 35,
+            "function": "handleError",
+            "class": "Illuminate\\Foundation\\Bootstrap\\HandleExceptions",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+            "line": 54,
+            "function": "cat_game",
+            "class": "Modules\\Page\\Http\\Controllers\\HomeApiController",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+            "line": 45,
+            "function": "callAction",
+            "class": "Illuminate\\Routing\\Controller",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 239,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\ControllerDispatcher",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 196,
+            "function": "runController",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 685,
+            "function": "run",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 128,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "line": 59,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 103,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 687,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 662,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 628,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 617,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 165,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 128,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 63,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
+            "line": 52,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Fruitcake\\Cors\\HandleCors",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 103,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 140,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 109,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 324,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 305,
+            "function": "callLaravelOrLumenRoute",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 76,
+            "function": "makeApiCall",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 51,
+            "function": "makeResponseCall",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 41,
+            "function": "makeResponseCallIfEnabledAndNoSuccessResponses",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "line": 236,
+            "function": "__invoke",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "line": 172,
+            "function": "iterateThroughStrategies",
+            "class": "Knuckles\\Scribe\\Extracting\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "line": 127,
+            "function": "fetchResponses",
+            "class": "Knuckles\\Scribe\\Extracting\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "line": 119,
+            "function": "processRoute",
+            "class": "Knuckles\\Scribe\\Extracting\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "line": 73,
+            "function": "processRoutes",
+            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 36,
+            "function": "handle",
+            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
+            "line": 37,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 93,
+            "function": "unwrapIfClosure",
+            "class": "Illuminate\\Container\\Util",
+            "type": "::"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 37,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 596,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 134,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 299,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 121,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\symfony\\console\\Application.php",
+            "line": 978,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\symfony\\console\\Application.php",
+            "line": 295,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\symfony\\console\\Application.php",
+            "line": 167,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 93,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 129,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "D:\\Matainja\\module-laravel-gemmezz\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "-&gt;"
+        }
+    ]
+}</code></pre>
+<div id="execution-results-GETapi-cat-game" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-cat-game"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-cat-game"></code></pre>
+</div>
+<div id="execution-error-GETapi-cat-game" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-cat-game"></code></pre>
+</div>
+<form id="form-GETapi-cat-game" data-method="GET" data-path="api/cat/game" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-cat-game', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-cat-game" onclick="tryItOut('GETapi-cat-game');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-cat-game" onclick="cancelTryOut('GETapi-cat-game');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-cat-game" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/cat/game</code></b>
+</p>
+</form>
+<h2>api/reward</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/reward" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/reward"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETapi-reward" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-reward"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-reward"></code></pre>
+</div>
+<div id="execution-error-GETapi-reward" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-reward"></code></pre>
+</div>
+<form id="form-GETapi-reward" data-method="GET" data-path="api/reward" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-reward', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-reward" onclick="tryItOut('GETapi-reward');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-reward" onclick="cancelTryOut('GETapi-reward');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-reward" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/reward</code></b>
+</p>
+</form>
+<h2>api/subscription</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/subscription" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/subscription"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETapi-subscription" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-subscription"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-subscription"></code></pre>
+</div>
+<div id="execution-error-GETapi-subscription" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-subscription"></code></pre>
+</div>
+<form id="form-GETapi-subscription" data-method="GET" data-path="api/subscription" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-subscription', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-subscription" onclick="tryItOut('GETapi-subscription');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-subscription" onclick="cancelTryOut('GETapi-subscription');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-subscription" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/subscription</code></b>
+</p>
+</form>
+<h2>api/user</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/user" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/user"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETapi-user" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-user"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-user"></code></pre>
+</div>
+<div id="execution-error-GETapi-user" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-user"></code></pre>
+</div>
+<form id="form-GETapi-user" data-method="GET" data-path="api/user" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-user', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-user" onclick="tryItOut('GETapi-user');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-user" onclick="cancelTryOut('GETapi-user');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-user" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/user</code></b>
+</p>
+</form>
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://gemezz.code-dev.in/api/winner" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://gemezz.code-dev.in/api/winner"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "competitions": []
+}</code></pre>
+<div id="execution-results-GETapi-winner" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-winner"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-winner"></code></pre>
+</div>
+<div id="execution-error-GETapi-winner" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-winner"></code></pre>
+</div>
+<form id="form-GETapi-winner" data-method="GET" data-path="api/winner" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-winner', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-winner" onclick="tryItOut('GETapi-winner');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-winner" onclick="cancelTryOut('GETapi-winner');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-winner" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/winner</code></b>
+</p>
+</form>
+    </div>
+    <div class="dark-box">
+                    <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+            </div>
+</div>
+<script>
+    $(function () {
+        var languages = ["bash","javascript"];
+        setupLanguages(languages);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,813 @@
+openapi: 3.0.3
+info:
+    title: 'The gemezz API'
+    description: ''
+    version: 1.0.0
+servers:
+    -
+        url: 'http://gemezz.code-dev.in'
+paths:
+    /api/utpal:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+    /api/healthcheck:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    status: up
+                                    services: { database: up, redis: up }
+                                properties:
+                                    status: { type: string, example: up }
+                                    services: { type: object, example: { database: up, redis: up } }
+            tags:
+                - Endpoints
+            security: []
+    /api/activity:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+    /api/admin:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+    /api/banner:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+    /api/category:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                500:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: 'Too few arguments to function Modules\Category\Http\Controllers\CategoryApiController::category(), 0 passed in D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Controller.php on line 54 and exactly 1 expected'
+                                    exception: ArgumentCountError
+                                    file: 'D:\Matainja\module-laravel-gemmezz\Modules\Category\Http\Controllers\CategoryApiController.php'
+                                    line: 34
+                                    trace: [{ file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Controller.php', line: 54, function: category, class: Modules\Category\Http\Controllers\CategoryApiController, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php', line: 45, function: callAction, class: Illuminate\Routing\Controller, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Route.php', line: 239, function: dispatch, class: Illuminate\Routing\ControllerDispatcher, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Route.php', line: 196, function: runController, class: Illuminate\Routing\Route, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 685, function: run, class: Illuminate\Routing\Route, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 128, function: 'Illuminate\Routing\{closure}', class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php', line: 41, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Routing\Middleware\SubstituteBindings, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php', line: 59, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Routing\Middleware\ThrottleRequests, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 103, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 687, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 662, function: runRouteWithinStack, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 628, function: runRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 617, function: dispatchToRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 165, function: dispatch, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 128, function: 'Illuminate\Foundation\Http\{closure}', class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php', line: 27, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\ValidatePostSize, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php', line: 63, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\fruitcake\laravel-cors\src\HandleCors.php', line: 52, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Fruitcake\Cors\HandleCors, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\fideloper\proxy\src\TrustProxies.php', line: 57, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Fideloper\Proxy\TrustProxies, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 103, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 140, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 109, function: sendRequestThroughRouter, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 324, function: handle, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 305, function: callLaravelOrLumenRoute, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 76, function: makeApiCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 51, function: makeResponseCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 41, function: makeResponseCallIfEnabledAndNoSuccessResponses, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 236, function: __invoke, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 172, function: iterateThroughStrategies, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 127, function: fetchResponses, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 119, function: processRoute, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 73, function: processRoutes, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 36, function: handle, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\Util.php', line: 37, function: 'Illuminate\Container\{closure}', class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 93, function: unwrapIfClosure, class: Illuminate\Container\Util, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 37, function: callBoundMethod, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\Container.php', line: 596, function: call, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 134, function: call, class: Illuminate\Container\Container, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Command\Command.php', line: 299, function: execute, class: Illuminate\Console\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 121, function: run, class: Symfony\Component\Console\Command\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 978, function: run, class: Illuminate\Console\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 295, function: doRunCommand, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 167, function: doRun, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Application.php', line: 93, function: run, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php', line: 129, function: run, class: Illuminate\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\artisan', line: 37, function: handle, class: Illuminate\Foundation\Console\Kernel, type: '->' }]
+                                properties:
+                                    message: { type: string, example: 'Too few arguments to function Modules\Category\Http\Controllers\CategoryApiController::category(), 0 passed in D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Controller.php on line 54 and exactly 1 expected' }
+                                    exception: { type: string, example: ArgumentCountError }
+                                    file: { type: string, example: 'D:\Matainja\module-laravel-gemmezz\Modules\Category\Http\Controllers\CategoryApiController.php' }
+                                    line: { type: integer, example: 34 }
+                                    trace: { type: array, example: [{ file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Controller.php', line: 54, function: category, class: Modules\Category\Http\Controllers\CategoryApiController, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php', line: 45, function: callAction, class: Illuminate\Routing\Controller, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Route.php', line: 239, function: dispatch, class: Illuminate\Routing\ControllerDispatcher, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Route.php', line: 196, function: runController, class: Illuminate\Routing\Route, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 685, function: run, class: Illuminate\Routing\Route, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 128, function: 'Illuminate\Routing\{closure}', class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php', line: 41, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Routing\Middleware\SubstituteBindings, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php', line: 59, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Routing\Middleware\ThrottleRequests, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 103, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 687, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 662, function: runRouteWithinStack, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 628, function: runRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 617, function: dispatchToRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 165, function: dispatch, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 128, function: 'Illuminate\Foundation\Http\{closure}', class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php', line: 27, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\ValidatePostSize, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php', line: 63, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\fruitcake\laravel-cors\src\HandleCors.php', line: 52, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Fruitcake\Cors\HandleCors, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\fideloper\proxy\src\TrustProxies.php', line: 57, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Fideloper\Proxy\TrustProxies, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 103, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 140, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 109, function: sendRequestThroughRouter, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 324, function: handle, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 305, function: callLaravelOrLumenRoute, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 76, function: makeApiCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 51, function: makeResponseCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 41, function: makeResponseCallIfEnabledAndNoSuccessResponses, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 236, function: __invoke, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 172, function: iterateThroughStrategies, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 127, function: fetchResponses, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 119, function: processRoute, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 73, function: processRoutes, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 36, function: handle, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\Util.php', line: 37, function: 'Illuminate\Container\{closure}', class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 93, function: unwrapIfClosure, class: Illuminate\Container\Util, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 37, function: callBoundMethod, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\Container.php', line: 596, function: call, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 134, function: call, class: Illuminate\Container\Container, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Command\Command.php', line: 299, function: execute, class: Illuminate\Console\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 121, function: run, class: Symfony\Component\Console\Command\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 978, function: run, class: Illuminate\Console\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 295, function: doRunCommand, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 167, function: doRun, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Application.php', line: 93, function: run, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php', line: 129, function: run, class: Illuminate\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\artisan', line: 37, function: handle, class: Illuminate\Foundation\Console\Kernel, type: '->' }], items: { type: object } }
+            tags:
+                - Endpoints
+            security: []
+    '/api/category/{id}/game':
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    title: 'The gemezz API'
+                                    Accept: application/json
+                                    match: { prefixes: ['api/*'], domains: ['*'] }
+                                    '0': { current_page: 1, data: [], first_page_url: 'http://localhost/api/category/vel/game?page=1', from: null, next_page_url: null, path: 'http://localhost/api/category/vel/game', per_page: 10, prev_page_url: null, to: null }
+                                properties:
+                                    title: { type: string, example: 'The gemezz API' }
+                                    Accept: { type: string, example: application/json }
+                                    match: { type: object, example: { prefixes: ['api/*'], domains: ['*'] } }
+                                    0: { type: object, example: { current_page: 1, data: [], first_page_url: 'http://localhost/api/category/vel/game?page=1', from: null, next_page_url: null, path: 'http://localhost/api/category/vel/game', per_page: 10, prev_page_url: null, to: null } }
+            tags:
+                - Endpoints
+            security: []
+        parameters:
+            -
+                in: path
+                name: id
+                description: ''
+                example: vel
+                required: true
+                schema:
+                    type: string
+    /api/competition:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    soon_competitions: []
+                                    finish_competitions: { current_page: 1, data: [{ id: 1, id_competitiongame: 6, competition_type: 1, prize_image1: 00982_sunsetcelebration_1920x1200.jpg, prize_coins1: 23, prize_image2: 2005-05-30-1920x1200.jpg, prize_coins2: 33, prize_image3: 4.jpg, prize_coins3: 44, start_date: '2021-09-08', end_date: '2021-09-08', created_at: '2021-09-08T07:02:57.000000Z', updated_at: '2021-09-16T06:52:55.000000Z', banner_image: 2in-ci2_js1a.jpg, is_deleted: 1, game_id: 6, game_uuid: 7b1a14fa-043f-4f18-8b74-2d26574d27ef, game_name: 'sanjoy jana', game_category: 5, game_desc: wer, game_rule: fgh, game_image: '0', game_url: hgfadsadd, category_name: { category_name: fghjk } }, { id: 2, id_competitiongame: 5, competition_type: 2, prize_image1: 00982_sunsetcelebration_1920x1200.jpg, prize_coins1: 11, prize_image2: 2005-05-30-1920x1200.jpg, prize_coins2: 22, prize_image3: 4.jpg, prize_coins3: 33, start_date: '2021-09-14', end_date: '2021-09-14', created_at: '2021-09-08T07:14:33.000000Z', updated_at: '2021-09-08T07:14:33.000000Z', banner_image: Flag-of-India-300x200.gif, is_deleted: null, game_id: 5, game_uuid: b9f43919-145b-4efb-b1a1-23c7cb7e1ff3, game_name: Avijiqwerty, game_category: 5, game_desc: xcvbn, game_rule: xchj, game_image: '0', game_url: sdfgh, category_name: { category_name: fghjk } }, { id: 3, id_competitiongame: 6, competition_type: 1, prize_image1: 00982_sunsetcelebration_1920x1200.jpg, prize_coins1: 11, prize_image2: 4.jpg, prize_coins2: 22, prize_image3: 2005-05-30-1920x1200.jpg, prize_coins3: 33, start_date: '2021-09-15', end_date: '2021-09-15', created_at: '2021-09-08T07:15:28.000000Z', updated_at: '2021-09-10T10:52:20.000000Z', banner_image: Flag-of-India-300x200.gif, is_deleted: null, game_id: 6, game_uuid: 7b1a14fa-043f-4f18-8b74-2d26574d27ef, game_name: 'sanjoy jana', game_category: 5, game_desc: wer, game_rule: fgh, game_image: '0', game_url: hgfadsadd, category_name: { category_name: fghjk } }, { id: 4, id_competitiongame: 20, competition_type: 2, prize_image1: icon_cat_puzzle.png, prize_coins1: 44, prize_image2: What-is-image-resolution-all-about-and-how-can-I-change-DPI-in-MS-Paint2.jpg, prize_coins2: 33, prize_image3: Naam-Limits-of-Earth-Part1-001-earth-600x600.jpg, prize_coins3: 11, start_date: '2021-09-11', end_date: '2021-09-13', created_at: '2021-09-10T05:02:20.000000Z', updated_at: '2021-09-10T05:02:20.000000Z', banner_image: Flag-of-India-300x200.gif, is_deleted: null, game_id: null, game_uuid: null, game_name: null, game_category: null, game_desc: null, game_rule: null, game_image: null, game_url: null, category_name: null }], first_page_url: 'http://localhost/api/competition?page=1', from: 1, next_page_url: null, path: 'http://localhost/api/competition', per_page: 5, prev_page_url: null, to: 4 }
+                                    current_competitions: [{ id: 1, id_competitiongame: 6, competition_type: 1, prize_image1: 00982_sunsetcelebration_1920x1200.jpg, prize_coins1: 23, prize_image2: 2005-05-30-1920x1200.jpg, prize_coins2: 33, prize_image3: 4.jpg, prize_coins3: 44, start_date: '2021-09-08', end_date: '2021-09-08', created_at: '2021-09-08T07:02:57.000000Z', updated_at: '2021-09-16T06:52:55.000000Z', banner_image: 2in-ci2_js1a.jpg, is_deleted: 1, game_id: 6, game_uuid: 7b1a14fa-043f-4f18-8b74-2d26574d27ef, game_name: 'sanjoy jana', game_category: 5, game_desc: wer, game_rule: fgh, game_image: '0', game_url: hgfadsadd, category_name: { category_name: fghjk } }, { id: 2, id_competitiongame: 5, competition_type: 2, prize_image1: 00982_sunsetcelebration_1920x1200.jpg, prize_coins1: 11, prize_image2: 2005-05-30-1920x1200.jpg, prize_coins2: 22, prize_image3: 4.jpg, prize_coins3: 33, start_date: '2021-09-14', end_date: '2021-09-14', created_at: '2021-09-08T07:14:33.000000Z', updated_at: '2021-09-08T07:14:33.000000Z', banner_image: Flag-of-India-300x200.gif, is_deleted: null, game_id: 5, game_uuid: b9f43919-145b-4efb-b1a1-23c7cb7e1ff3, game_name: Avijiqwerty, game_category: 5, game_desc: xcvbn, game_rule: xchj, game_image: '0', game_url: sdfgh, category_name: { category_name: fghjk } }, { id: 3, id_competitiongame: 6, competition_type: 1, prize_image1: 00982_sunsetcelebration_1920x1200.jpg, prize_coins1: 11, prize_image2: 4.jpg, prize_coins2: 22, prize_image3: 2005-05-30-1920x1200.jpg, prize_coins3: 33, start_date: '2021-09-15', end_date: '2021-09-15', created_at: '2021-09-08T07:15:28.000000Z', updated_at: '2021-09-10T10:52:20.000000Z', banner_image: Flag-of-India-300x200.gif, is_deleted: null, game_id: 6, game_uuid: 7b1a14fa-043f-4f18-8b74-2d26574d27ef, game_name: 'sanjoy jana', game_category: 5, game_desc: wer, game_rule: fgh, game_image: '0', game_url: hgfadsadd, category_name: { category_name: fghjk } }, { id: 4, id_competitiongame: 20, competition_type: 2, prize_image1: icon_cat_puzzle.png, prize_coins1: 44, prize_image2: What-is-image-resolution-all-about-and-how-can-I-change-DPI-in-MS-Paint2.jpg, prize_coins2: 33, prize_image3: Naam-Limits-of-Earth-Part1-001-earth-600x600.jpg, prize_coins3: 11, start_date: '2021-09-11', end_date: '2021-09-13', created_at: '2021-09-10T05:02:20.000000Z', updated_at: '2021-09-10T05:02:20.000000Z', banner_image: Flag-of-India-300x200.gif, is_deleted: null, game_id: null, game_uuid: null, game_name: null, game_category: null, game_desc: null, game_rule: null, game_image: null, game_url: null, category_name: null }]
+                                properties:
+                                    soon_competitions: { type: array, example: [] }
+                                    finish_competitions: { type: object, example: { current_page: 1, data: [{ id: 1, id_competitiongame: 6, competition_type: 1, prize_image1: 00982_sunsetcelebration_1920x1200.jpg, prize_coins1: 23, prize_image2: 2005-05-30-1920x1200.jpg, prize_coins2: 33, prize_image3: 4.jpg, prize_coins3: 44, start_date: '2021-09-08', end_date: '2021-09-08', created_at: '2021-09-08T07:02:57.000000Z', updated_at: '2021-09-16T06:52:55.000000Z', banner_image: 2in-ci2_js1a.jpg, is_deleted: 1, game_id: 6, game_uuid: 7b1a14fa-043f-4f18-8b74-2d26574d27ef, game_name: 'sanjoy jana', game_category: 5, game_desc: wer, game_rule: fgh, game_image: '0', game_url: hgfadsadd, category_name: { category_name: fghjk } }, { id: 2, id_competitiongame: 5, competition_type: 2, prize_image1: 00982_sunsetcelebration_1920x1200.jpg, prize_coins1: 11, prize_image2: 2005-05-30-1920x1200.jpg, prize_coins2: 22, prize_image3: 4.jpg, prize_coins3: 33, start_date: '2021-09-14', end_date: '2021-09-14', created_at: '2021-09-08T07:14:33.000000Z', updated_at: '2021-09-08T07:14:33.000000Z', banner_image: Flag-of-India-300x200.gif, is_deleted: null, game_id: 5, game_uuid: b9f43919-145b-4efb-b1a1-23c7cb7e1ff3, game_name: Avijiqwerty, game_category: 5, game_desc: xcvbn, game_rule: xchj, game_image: '0', game_url: sdfgh, category_name: { category_name: fghjk } }, { id: 3, id_competitiongame: 6, competition_type: 1, prize_image1: 00982_sunsetcelebration_1920x1200.jpg, prize_coins1: 11, prize_image2: 4.jpg, prize_coins2: 22, prize_image3: 2005-05-30-1920x1200.jpg, prize_coins3: 33, start_date: '2021-09-15', end_date: '2021-09-15', created_at: '2021-09-08T07:15:28.000000Z', updated_at: '2021-09-10T10:52:20.000000Z', banner_image: Flag-of-India-300x200.gif, is_deleted: null, game_id: 6, game_uuid: 7b1a14fa-043f-4f18-8b74-2d26574d27ef, game_name: 'sanjoy jana', game_category: 5, game_desc: wer, game_rule: fgh, game_image: '0', game_url: hgfadsadd, category_name: { category_name: fghjk } }, { id: 4, id_competitiongame: 20, competition_type: 2, prize_image1: icon_cat_puzzle.png, prize_coins1: 44, prize_image2: What-is-image-resolution-all-about-and-how-can-I-change-DPI-in-MS-Paint2.jpg, prize_coins2: 33, prize_image3: Naam-Limits-of-Earth-Part1-001-earth-600x600.jpg, prize_coins3: 11, start_date: '2021-09-11', end_date: '2021-09-13', created_at: '2021-09-10T05:02:20.000000Z', updated_at: '2021-09-10T05:02:20.000000Z', banner_image: Flag-of-India-300x200.gif, is_deleted: null, game_id: null, game_uuid: null, game_name: null, game_category: null, game_desc: null, game_rule: null, game_image: null, game_url: null, category_name: null }], first_page_url: 'http://localhost/api/competition?page=1', from: 1, next_page_url: null, path: 'http://localhost/api/competition', per_page: 5, prev_page_url: null, to: 4 } }
+                                    current_competitions: { type: array, example: [{ id: 1, id_competitiongame: 6, competition_type: 1, prize_image1: 00982_sunsetcelebration_1920x1200.jpg, prize_coins1: 23, prize_image2: 2005-05-30-1920x1200.jpg, prize_coins2: 33, prize_image3: 4.jpg, prize_coins3: 44, start_date: '2021-09-08', end_date: '2021-09-08', created_at: '2021-09-08T07:02:57.000000Z', updated_at: '2021-09-16T06:52:55.000000Z', banner_image: 2in-ci2_js1a.jpg, is_deleted: 1, game_id: 6, game_uuid: 7b1a14fa-043f-4f18-8b74-2d26574d27ef, game_name: 'sanjoy jana', game_category: 5, game_desc: wer, game_rule: fgh, game_image: '0', game_url: hgfadsadd, category_name: { category_name: fghjk } }, { id: 2, id_competitiongame: 5, competition_type: 2, prize_image1: 00982_sunsetcelebration_1920x1200.jpg, prize_coins1: 11, prize_image2: 2005-05-30-1920x1200.jpg, prize_coins2: 22, prize_image3: 4.jpg, prize_coins3: 33, start_date: '2021-09-14', end_date: '2021-09-14', created_at: '2021-09-08T07:14:33.000000Z', updated_at: '2021-09-08T07:14:33.000000Z', banner_image: Flag-of-India-300x200.gif, is_deleted: null, game_id: 5, game_uuid: b9f43919-145b-4efb-b1a1-23c7cb7e1ff3, game_name: Avijiqwerty, game_category: 5, game_desc: xcvbn, game_rule: xchj, game_image: '0', game_url: sdfgh, category_name: { category_name: fghjk } }, { id: 3, id_competitiongame: 6, competition_type: 1, prize_image1: 00982_sunsetcelebration_1920x1200.jpg, prize_coins1: 11, prize_image2: 4.jpg, prize_coins2: 22, prize_image3: 2005-05-30-1920x1200.jpg, prize_coins3: 33, start_date: '2021-09-15', end_date: '2021-09-15', created_at: '2021-09-08T07:15:28.000000Z', updated_at: '2021-09-10T10:52:20.000000Z', banner_image: Flag-of-India-300x200.gif, is_deleted: null, game_id: 6, game_uuid: 7b1a14fa-043f-4f18-8b74-2d26574d27ef, game_name: 'sanjoy jana', game_category: 5, game_desc: wer, game_rule: fgh, game_image: '0', game_url: hgfadsadd, category_name: { category_name: fghjk } }, { id: 4, id_competitiongame: 20, competition_type: 2, prize_image1: icon_cat_puzzle.png, prize_coins1: 44, prize_image2: What-is-image-resolution-all-about-and-how-can-I-change-DPI-in-MS-Paint2.jpg, prize_coins2: 33, prize_image3: Naam-Limits-of-Earth-Part1-001-earth-600x600.jpg, prize_coins3: 11, start_date: '2021-09-11', end_date: '2021-09-13', created_at: '2021-09-10T05:02:20.000000Z', updated_at: '2021-09-10T05:02:20.000000Z', banner_image: Flag-of-India-300x200.gif, is_deleted: null, game_id: null, game_uuid: null, game_name: null, game_category: null, game_desc: null, game_rule: null, game_image: null, game_url: null, category_name: null }], items: { type: object } }
+            tags:
+                - Endpoints
+            security: []
+    /api/content:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+    /api/domain:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+    '/api/getgamesbycategory/{id}':
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: array
+                                items:
+                                    type: object
+                                example: []
+            tags:
+                - Endpoints
+            security: []
+        parameters:
+            -
+                in: path
+                name: id
+                description: ''
+                example: enim
+                required: true
+                schema:
+                    type: string
+    '/api/game/{uuid}':
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Endpoints
+            security: []
+        parameters:
+            -
+                in: path
+                name: uuid
+                description: ''
+                example: quibusdam
+                required: true
+                schema:
+                    type: string
+    '/api/competition/{id}/game/{uuid}':
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                500:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: 'Attempt to read property "category_id" on null'
+                                    exception: ErrorException
+                                    file: 'D:\Matainja\module-laravel-gemmezz\Modules\Game\Http\Controllers\GameApiController.php'
+                                    line: 28
+                                    trace: [{ file: 'D:\Matainja\module-laravel-gemmezz\Modules\Game\Http\Controllers\GameApiController.php', line: 28, function: handleError, class: Illuminate\Foundation\Bootstrap\HandleExceptions, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Controller.php', line: 54, function: comp_game_details, class: Modules\Game\Http\Controllers\GameApiController, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php', line: 45, function: callAction, class: Illuminate\Routing\Controller, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Route.php', line: 239, function: dispatch, class: Illuminate\Routing\ControllerDispatcher, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Route.php', line: 196, function: runController, class: Illuminate\Routing\Route, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 685, function: run, class: Illuminate\Routing\Route, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 128, function: 'Illuminate\Routing\{closure}', class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php', line: 41, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Routing\Middleware\SubstituteBindings, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php', line: 59, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Routing\Middleware\ThrottleRequests, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 103, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 687, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 662, function: runRouteWithinStack, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 628, function: runRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 617, function: dispatchToRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 165, function: dispatch, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 128, function: 'Illuminate\Foundation\Http\{closure}', class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php', line: 27, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\ValidatePostSize, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php', line: 63, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\fruitcake\laravel-cors\src\HandleCors.php', line: 52, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Fruitcake\Cors\HandleCors, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\fideloper\proxy\src\TrustProxies.php', line: 57, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Fideloper\Proxy\TrustProxies, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 103, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 140, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 109, function: sendRequestThroughRouter, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 324, function: handle, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 305, function: callLaravelOrLumenRoute, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 76, function: makeApiCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 51, function: makeResponseCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 41, function: makeResponseCallIfEnabledAndNoSuccessResponses, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 236, function: __invoke, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 172, function: iterateThroughStrategies, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 127, function: fetchResponses, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 119, function: processRoute, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 73, function: processRoutes, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 36, function: handle, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\Util.php', line: 37, function: 'Illuminate\Container\{closure}', class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 93, function: unwrapIfClosure, class: Illuminate\Container\Util, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 37, function: callBoundMethod, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\Container.php', line: 596, function: call, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 134, function: call, class: Illuminate\Container\Container, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Command\Command.php', line: 299, function: execute, class: Illuminate\Console\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 121, function: run, class: Symfony\Component\Console\Command\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 978, function: run, class: Illuminate\Console\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 295, function: doRunCommand, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 167, function: doRun, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Application.php', line: 93, function: run, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php', line: 129, function: run, class: Illuminate\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\artisan', line: 37, function: handle, class: Illuminate\Foundation\Console\Kernel, type: '->' }]
+                                properties:
+                                    message: { type: string, example: 'Attempt to read property "category_id" on null' }
+                                    exception: { type: string, example: ErrorException }
+                                    file: { type: string, example: 'D:\Matainja\module-laravel-gemmezz\Modules\Game\Http\Controllers\GameApiController.php' }
+                                    line: { type: integer, example: 28 }
+                                    trace: { type: array, example: [{ file: 'D:\Matainja\module-laravel-gemmezz\Modules\Game\Http\Controllers\GameApiController.php', line: 28, function: handleError, class: Illuminate\Foundation\Bootstrap\HandleExceptions, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Controller.php', line: 54, function: comp_game_details, class: Modules\Game\Http\Controllers\GameApiController, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php', line: 45, function: callAction, class: Illuminate\Routing\Controller, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Route.php', line: 239, function: dispatch, class: Illuminate\Routing\ControllerDispatcher, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Route.php', line: 196, function: runController, class: Illuminate\Routing\Route, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 685, function: run, class: Illuminate\Routing\Route, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 128, function: 'Illuminate\Routing\{closure}', class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php', line: 41, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Routing\Middleware\SubstituteBindings, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php', line: 59, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Routing\Middleware\ThrottleRequests, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 103, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 687, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 662, function: runRouteWithinStack, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 628, function: runRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 617, function: dispatchToRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 165, function: dispatch, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 128, function: 'Illuminate\Foundation\Http\{closure}', class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php', line: 27, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\ValidatePostSize, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php', line: 63, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\fruitcake\laravel-cors\src\HandleCors.php', line: 52, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Fruitcake\Cors\HandleCors, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\fideloper\proxy\src\TrustProxies.php', line: 57, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Fideloper\Proxy\TrustProxies, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 103, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 140, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 109, function: sendRequestThroughRouter, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 324, function: handle, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 305, function: callLaravelOrLumenRoute, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 76, function: makeApiCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 51, function: makeResponseCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 41, function: makeResponseCallIfEnabledAndNoSuccessResponses, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 236, function: __invoke, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 172, function: iterateThroughStrategies, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 127, function: fetchResponses, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 119, function: processRoute, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 73, function: processRoutes, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 36, function: handle, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\Util.php', line: 37, function: 'Illuminate\Container\{closure}', class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 93, function: unwrapIfClosure, class: Illuminate\Container\Util, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 37, function: callBoundMethod, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\Container.php', line: 596, function: call, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 134, function: call, class: Illuminate\Container\Container, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Command\Command.php', line: 299, function: execute, class: Illuminate\Console\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 121, function: run, class: Symfony\Component\Console\Command\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 978, function: run, class: Illuminate\Console\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 295, function: doRunCommand, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 167, function: doRun, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Application.php', line: 93, function: run, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php', line: 129, function: run, class: Illuminate\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\artisan', line: 37, function: handle, class: Illuminate\Foundation\Console\Kernel, type: '->' }], items: { type: object } }
+            tags:
+                - Endpoints
+            security: []
+        parameters:
+            -
+                in: path
+                name: id
+                description: ''
+                example: sed
+                required: true
+                schema:
+                    type: string
+            -
+                in: path
+                name: uuid
+                description: ''
+                example: impedit
+                required: true
+                schema:
+                    type: string
+    /api/language:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+    /api/notification:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+    /api/notify:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+    /api/page:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+    /api/cat/game:
+        get:
+            summary: 'Display a listing of the resource.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                500:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: 'Attempt to read property "name" on null'
+                                    exception: ErrorException
+                                    file: 'D:\Matainja\module-laravel-gemmezz\Modules\Page\Http\Controllers\HomeApiController.php'
+                                    line: 35
+                                    trace: [{ file: 'D:\Matainja\module-laravel-gemmezz\Modules\Page\Http\Controllers\HomeApiController.php', line: 35, function: handleError, class: Illuminate\Foundation\Bootstrap\HandleExceptions, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Controller.php', line: 54, function: cat_game, class: Modules\Page\Http\Controllers\HomeApiController, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php', line: 45, function: callAction, class: Illuminate\Routing\Controller, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Route.php', line: 239, function: dispatch, class: Illuminate\Routing\ControllerDispatcher, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Route.php', line: 196, function: runController, class: Illuminate\Routing\Route, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 685, function: run, class: Illuminate\Routing\Route, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 128, function: 'Illuminate\Routing\{closure}', class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php', line: 41, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Routing\Middleware\SubstituteBindings, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php', line: 59, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Routing\Middleware\ThrottleRequests, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 103, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 687, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 662, function: runRouteWithinStack, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 628, function: runRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 617, function: dispatchToRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 165, function: dispatch, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 128, function: 'Illuminate\Foundation\Http\{closure}', class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php', line: 27, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\ValidatePostSize, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php', line: 63, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\fruitcake\laravel-cors\src\HandleCors.php', line: 52, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Fruitcake\Cors\HandleCors, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\fideloper\proxy\src\TrustProxies.php', line: 57, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Fideloper\Proxy\TrustProxies, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 103, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 140, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 109, function: sendRequestThroughRouter, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 324, function: handle, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 305, function: callLaravelOrLumenRoute, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 76, function: makeApiCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 51, function: makeResponseCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 41, function: makeResponseCallIfEnabledAndNoSuccessResponses, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 236, function: __invoke, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 172, function: iterateThroughStrategies, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 127, function: fetchResponses, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 119, function: processRoute, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 73, function: processRoutes, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 36, function: handle, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\Util.php', line: 37, function: 'Illuminate\Container\{closure}', class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 93, function: unwrapIfClosure, class: Illuminate\Container\Util, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 37, function: callBoundMethod, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\Container.php', line: 596, function: call, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 134, function: call, class: Illuminate\Container\Container, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Command\Command.php', line: 299, function: execute, class: Illuminate\Console\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 121, function: run, class: Symfony\Component\Console\Command\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 978, function: run, class: Illuminate\Console\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 295, function: doRunCommand, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 167, function: doRun, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Application.php', line: 93, function: run, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php', line: 129, function: run, class: Illuminate\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\artisan', line: 37, function: handle, class: Illuminate\Foundation\Console\Kernel, type: '->' }]
+                                properties:
+                                    message: { type: string, example: 'Attempt to read property "name" on null' }
+                                    exception: { type: string, example: ErrorException }
+                                    file: { type: string, example: 'D:\Matainja\module-laravel-gemmezz\Modules\Page\Http\Controllers\HomeApiController.php' }
+                                    line: { type: integer, example: 35 }
+                                    trace: { type: array, example: [{ file: 'D:\Matainja\module-laravel-gemmezz\Modules\Page\Http\Controllers\HomeApiController.php', line: 35, function: handleError, class: Illuminate\Foundation\Bootstrap\HandleExceptions, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Controller.php', line: 54, function: cat_game, class: Modules\Page\Http\Controllers\HomeApiController, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php', line: 45, function: callAction, class: Illuminate\Routing\Controller, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Route.php', line: 239, function: dispatch, class: Illuminate\Routing\ControllerDispatcher, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Route.php', line: 196, function: runController, class: Illuminate\Routing\Route, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 685, function: run, class: Illuminate\Routing\Route, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 128, function: 'Illuminate\Routing\{closure}', class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php', line: 41, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Routing\Middleware\SubstituteBindings, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php', line: 59, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Routing\Middleware\ThrottleRequests, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 103, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 687, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 662, function: runRouteWithinStack, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 628, function: runRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 617, function: dispatchToRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 165, function: dispatch, class: Illuminate\Routing\Router, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 128, function: 'Illuminate\Foundation\Http\{closure}', class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php', line: 27, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\ValidatePostSize, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php', line: 63, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\fruitcake\laravel-cors\src\HandleCors.php', line: 52, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Fruitcake\Cors\HandleCors, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\fideloper\proxy\src\TrustProxies.php', line: 57, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 167, function: handle, class: Fideloper\Proxy\TrustProxies, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 103, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 140, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 109, function: sendRequestThroughRouter, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 324, function: handle, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 305, function: callLaravelOrLumenRoute, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 76, function: makeApiCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 51, function: makeResponseCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 41, function: makeResponseCallIfEnabledAndNoSuccessResponses, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 236, function: __invoke, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 172, function: iterateThroughStrategies, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 127, function: fetchResponses, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 119, function: processRoute, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 73, function: processRoutes, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 36, function: handle, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\Util.php', line: 37, function: 'Illuminate\Container\{closure}', class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 93, function: unwrapIfClosure, class: Illuminate\Container\Util, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 37, function: callBoundMethod, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Container\Container.php', line: 596, function: call, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 134, function: call, class: Illuminate\Container\Container, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Command\Command.php', line: 299, function: execute, class: Illuminate\Console\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 121, function: run, class: Symfony\Component\Console\Command\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 978, function: run, class: Illuminate\Console\Command, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 295, function: doRunCommand, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\symfony\console\Application.php', line: 167, function: doRun, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Console\Application.php', line: 93, function: run, class: Symfony\Component\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php', line: 129, function: run, class: Illuminate\Console\Application, type: '->' }, { file: 'D:\Matainja\module-laravel-gemmezz\artisan', line: 37, function: handle, class: Illuminate\Foundation\Console\Kernel, type: '->' }], items: { type: object } }
+            tags:
+                - Endpoints
+            security: []
+    /api/reward:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+    /api/subscription:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+    /api/user:
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                401:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: Unauthenticated.
+                                properties:
+                                    message: { type: string, example: Unauthenticated. }
+            tags:
+                - Endpoints
+            security: []
+    /api/winner:
+        get:
+            summary: 'Display a listing of the resource.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    competitions: []
+                                properties:
+                                    competitions: { type: array, example: [] }
+            tags:
+                - Endpoints
+            security: []
+components:
+    securitySchemes:
+        default:
+            type: http
+            scheme: bearer
+            description: ''
+security:
+    -
+        default: []

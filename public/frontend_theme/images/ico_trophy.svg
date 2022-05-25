@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="44.154" viewBox="0 0 50 44.154">
+  <g id="ico_trophy" transform="translate(-1.753 -9.029)">
+    <rect id="Rectangle_23" data-name="Rectangle 23" width="33.886" height="4.617" rx="2.309" transform="translate(9.809 48.566)" fill="#2d3c6b"/>
+    <path id="Path_3211" data-name="Path 3211" d="M57.8,91.614H32.5L38.152,80.97h14Z" transform="translate(-18.399 -43.048)" fill="#ffc839"/>
+    <path id="Path_3212" data-name="Path 3212" d="M45.805,93.189l2.24-4.219H58.18l2.24,4.219Z" transform="translate(-26.36 -47.835)" fill="#ff9100"/>
+    <path id="Path_3213" data-name="Path 3213" d="M33.156,9.029v16.1a10.437,10.437,0,0,0,5.388,9.129h14a10.437,10.437,0,0,0,5.388-9.129V9.029Z" transform="translate(-18.791)" fill="#ffc839"/>
+    <path id="Path_3214" data-name="Path 3214" d="M52.521,30.886,50.174,27.68l3.95.429,1.6-3.635,1.6,3.635,3.95-.429-2.347,3.206,2.347,3.206-3.95-.429-1.6,3.635-1.6-3.635-3.95.429Z" transform="translate(-28.974 -9.242)" fill="#fcf9f0"/>
+    <g id="Group_77" data-name="Group 77" transform="translate(1.753 12.019)">
+      <path id="Path_3215" data-name="Path 3215" d="M46.572,71.849h14v3.663h-14Z" transform="translate(-28.572 -49.609)" fill="#ff9100"/>
+      <path id="Path_3216" data-name="Path 3216" d="M99.544,16.473H92.556v3.213h6.988a2.413,2.413,0,0,1,2.41,2.41V27.21a2.4,2.4,0,0,1-1.851,2.344l-7.711,1.84a10.4,10.4,0,0,1-1.374,3.631l9.832-2.345a5.6,5.6,0,0,0,4.318-5.469V22.1A5.629,5.629,0,0,0,99.544,16.473Z" transform="translate(-55.168 -16.473)" fill="#ff9100"/>
+      <path id="Path_3217" data-name="Path 3217" d="M7.376,16.473h6.988v3.213H7.376a2.413,2.413,0,0,0-2.41,2.41V27.21a2.4,2.4,0,0,0,1.851,2.344l7.711,1.84A10.4,10.4,0,0,0,15.9,35.024L6.069,32.679A5.6,5.6,0,0,1,1.753,27.21V22.1a5.629,5.629,0,0,1,5.623-5.623Z" transform="translate(-1.753 -16.473)" fill="#ff9100"/>
+    </g>
+  </g>
+</svg>

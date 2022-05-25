@@ -1,0 +1,18 @@
+{
+    "User": true,
+    "Page": true,
+    "Competition": true,
+    "Game": true,
+    "Content": true,
+    "Admin": true,
+    "Category": true,
+    "Banner": true,
+    "Notification": true,
+    "Activity": true,
+    "Winner": true,
+    "Notify": true,
+    "Domain": true,
+    "Language": true,
+    "Reward": true,
+    "Subscription": true
+}

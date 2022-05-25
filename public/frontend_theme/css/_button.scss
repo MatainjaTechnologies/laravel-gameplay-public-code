@@ -1,0 +1,190 @@
+.btn {
+    border-radius: $border-radius;
+}
+
+// button shadow
+.button-green-sh {
+    background-color: $color-green;
+    color: $color-white;
+    box-shadow: 0 5px 0 darken($color-green, 15%);
+    &:hover,
+    &:focus {
+        background-color: darken($color-green, 5%);
+        color: $color-white;
+    }
+    &.sh-sm {
+        box-shadow: 0 2px 0 darken($color-green, 15%);
+    }
+}
+
+.button-grey-sh {
+    background-color: $color-secondary;
+    color: $color-white;
+    box-shadow: 0 5px 0 darken($color-secondary, 15%);
+    &:hover,
+    &:focus {
+        background-color: darken($color-secondary, 5%);
+        color: $color-white;
+    }
+    &.sh-sm {
+        box-shadow: 0 2px 0 darken($color-secondary, 15%);
+    }
+}
+
+.button-grey-young-sh {
+    background-color: $color-grey-young;
+    color: $color-black;
+    box-shadow: 0 5px 0 darken($color-grey-young, 15%);
+    &:hover,
+    &:focus {
+        background-color: darken($color-grey-young, 5%);
+        color: $color-black;
+    }
+    &.sh-sm {
+        box-shadow: 0 2px 0 darken($color-grey-young, 15%);
+    }
+}
+
+// button standard
+.button-green {
+    background-color: $color-green;
+    padding: .55rem .75rem;
+    box-shadow: $shadow;
+    color: $color-white;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $color-white;
+        background-color: darken($color-green, 10%);
+    }
+}
+
+.button-grey {
+    background-color: $color-secondary;
+    padding: .55rem .75rem;
+    box-shadow: $shadow;
+    color: $color-white;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $color-white;
+        background-color: darken($color-secondary, 10%);
+    }
+}
+
+.button-grey-young {
+    background-color: $color-grey-young;
+    padding: .55rem .75rem;
+    box-shadow: $shadow;
+    color: $color-black;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $color-white;
+        background-color: darken($color-grey-young, 10%);
+    }
+}
+
+.button-disabled {
+    background-color: rgba($color-grey, 0.75);
+    color: $color-white;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color-white;
+    }
+}
+
+
+// button custom
+.btn-with-img {
+    background-color: $color-grey-smoke;
+    color: $color-grey;
+    border-radius: 25px;
+    padding: .25rem .75rem .25rem 2.85rem;
+    position: relative;
+    font-size: $font-size-body-small;
+    // &:hover,
+    // &:focus {
+        
+    // }
+    &.active {
+        background-color: $color-secondary;
+        color: $color-white;
+        box-shadow: 0 2px 0 darken($color-secondary, 15%);
+    }
+    .btn-with-img-box {
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+        position: absolute;
+        left: 10px;
+        bottom: .25rem;
+        background-repeat: no-repeat;
+    }
+}
+
+.btn-login-social {
+    padding: .65rem;
+    min-width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: $shadow;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.fb {
+        background-color: $color-fb;
+        border: 1px solid $color-fb;
+    }
+    &.tw {
+        background-color: $color-tw;
+        border: 1px solid $color-tw;
+    }
+    &.gl {
+        background-color: $color-white;
+        border: 1px solid $color-grey;
+    }
+}
+
+.btn-tabs {
+    background-color: $color-white;
+    color: $color-black;
+    padding: .55rem .75rem;
+    text-transform: uppercase;
+    font-size: $font-size-body-small;
+    &.active {
+        background-color: $color-secondary;
+        color: $color-white;
+        box-shadow: 0 2px 0 darken($color-secondary, 15%);
+    }
+}
+
+.btn-leaderboard {
+    background-color: rgba($color-black, 0.15);
+    color: $color-black;
+    padding: .55rem .75rem;
+    text-transform: uppercase;
+    font-size: $font-size-body-small;
+    &.active {
+        background-color: $color-secondary;
+        color: $color-white;
+        box-shadow: 0 2px 0 darken($color-secondary, 15%);
+    }
+}
+
+.btn-edit-profile {
+    width: 20px;
+    height: 20px;
+    background-color: $color-white;
+    font-size: $font-size-body-tiny;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    border: 1px solid rgba($color-primary, 0.15);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

@@ -1,0 +1,1710 @@
+$color-orange           : #DB2417;
+$color-white            : #FFFFFF;
+$color-brown            : #401D1D;
+$color-yellow           : #FACC3E;
+$color-secondary        : #9D7878;
+$color-black            : #1F1F1F;
+$color-black-more       : #0D0A0A;
+$color-grey             : #9F9F9F;
+$color-green            : #46D64F;
+$color-secondary-alt    : #803C3C;
+$color-tabs             : #6C3030;
+$color-asphalt          : #9DBCD0;
+$color-fb               : #3B5998;
+$color-tw               : #00ACED;
+$color-red              : #CE2915;
+
+$font-size-body         : 14px;
+$font-size-body-small   : 12px;
+$font-size-heading      : 16px;
+
+body {
+    background-color: $color-brown;
+    color: $color-black;
+    font-size: $font-size-body;
+}
+
+a {
+    color: $color-black;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: rgba($color-orange, 0.8);
+    }
+}
+
+.slick-slide {
+    outline: none;
+    &:focus,
+    &:active {
+        outline: none
+    }
+}
+
+// Custom Element Start
+hr {
+    border-top: 1px solid rgba($color-black-more, 0.25);
+    &.or {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
+        &::before {
+            position: relative;
+            content: 'Or';
+            background-color: $color-white;
+            padding: 5px;
+            display: inline-block;
+            text-align: center;
+            top: -17px;
+            font-size: $font-size-body-small;
+            width: 25px;
+            height: 25px;
+            line-height: 20px;
+        }
+    }
+}
+.main-category-btn {
+    // background-color: $color-secondary;
+    border-color: $color-secondary;
+    color: $color-secondary;
+    padding: .25rem 1rem;
+    border-radius: 25px;
+    &:hover,
+    &:focus {
+        color: $color-white;
+        border-color: darken($color-orange, 5%);
+        background-color: darken($color-orange, 5%);
+    }
+    &.active {
+        background-color: $color-orange;
+        border-color: $color-orange;
+        color: $color-white;
+    }
+}
+.profile-subscribe-btn {
+    border-color: $color-white;
+    border-radius: 25px;
+    padding: .375rem .75rem;
+    text-align: center;
+    border: 1px solid $color-white;
+    display: inline-block;
+}
+.profile-info-btn {
+    padding: 18px 43px 18px 18px;
+    color: $color-black;
+    border-radius: 10px;
+    background-color: $color-white;
+    text-align: left;
+    position: relative;
+    &.yellow {
+        background-color: $color-yellow;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-image: url('../images/ico_next.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            right: 15px;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+}
+.main-success-btn {
+    background-color: $color-green;
+    border-color: $color-green;
+    color: $color-white;
+    padding: .25rem 1rem;
+    border-radius: 25px;
+    &:hover,
+    &:focus {
+        color: $color-white;
+        background-color: darken($color-green, 10%);
+    }
+}
+.main-success-outline-btn {
+    background-color: $color-white;
+    border-color: $color-green;
+    color: $color-green;
+    padding: .25rem 1rem;
+    border-radius: 25px;
+    &:hover,
+    &:focus {
+        color: $color-green;
+        background-color: $color-white;
+    }
+}
+.main-grey-outline-btn {
+    background-color: transparent;
+    border-color: $color-grey;
+    color: $color-grey;
+    padding: .25rem 1rem;
+    border-radius: 25px;
+    &:hover,
+    &:focus {
+        color: $color-grey;
+        background-color: transparent;
+    }
+}
+.main-black-outline-btn {
+    background-color: transparent;
+    border-color: $color-black;
+    color: $color-black;
+    padding: .25rem 1rem;
+    border-radius: 25px;
+    &:hover,
+    &:focus {
+        color: $color-black;
+        background-color: transparent;
+    }
+}
+.btn-login-box-grey {
+    background-color: $color-white;
+    border: 1px solid $color-grey;
+    &:hover,
+    &:focus {
+        color: $color-black;
+        box-shadow: none;
+    }
+}
+.btn-login-social {
+    padding: 8px;
+    min-width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    img {
+        height: 15px;
+        width: auto;
+        margin-top: -5px;
+    }
+    &.fb {
+        background-color: $color-fb;
+        border: 1px solid $color-fb;
+    }
+    &.tw {
+        background-color: $color-tw;
+        border: 1px solid $color-tw;
+    }
+    &.gl {
+        background-color: $color-white;
+        border: 1px solid $color-grey;
+    }
+}
+.main-orange-btn {
+    background-color: $color-orange;
+    border-color: $color-orange;
+    color: $color-white;
+    padding: .25rem 1rem;
+    border-radius: 25px;
+    &:hover,
+    &:focus {
+        color: $color-white;
+        background-color: darken($color-orange, 10%);
+    }
+}
+.main-play-btn {
+    background-color: $color-orange;
+    border-color: $color-orange;
+    color: $color-white;
+    padding: .25rem 1rem;
+    border-radius: 25px;
+    text-transform: uppercase;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 10px 12px;
+    box-shadow: 0 3px 6px rgba($color-black-more, 0.15);
+    &:hover,
+    &:focus {
+        color: $color-white;
+        background-color: darken($color-orange, 10%);
+    }
+}
+.main-download-btn {
+    background-color: $color-green;
+    border-color: $color-green;
+    color: $color-white;
+    padding: .25rem 1rem;
+    border-radius: 25px;
+    text-transform: uppercase;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 10px 12px;
+    box-shadow: 0 3px 6px rgba($color-black-more, 0.15);
+    &:hover,
+    &:focus {
+        color: $color-white;
+        background-color: darken($color-green, 10%);
+    }
+}
+.date-search-btn {
+    background-color: $color-yellow;
+    border-color: $color-yellow;
+    img {
+        height: 20px;
+        width: auto;
+        position: relative;
+        top: -2px;
+    }
+}
+.main-search {
+    border-radius: 25px;
+    border: none;
+    padding: 11px 55px 11px 28px;
+    box-shadow: 0px 3px 6px rgba($color-black-more, 0.2);
+    position: relative;
+}
+.button-purchase-green {
+    padding: 10px 15px;
+    background-color: $color-green;
+    color: $color-white;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 5px 6px rgba($color-black-more, 0.15);
+    p {
+        margin-bottom: 0;
+        line-height: normal;
+    }
+    .item-price {
+        font-size: $font-size-body-small;
+    }
+    img {
+        width: 45px;
+    }
+}
+.button-purchase-red {
+    padding: 10px 15px;
+    background-color: $color-red;
+    color: $color-white;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 5px 6px rgba($color-black-more, 0.15);
+    img {
+        width: 45px;
+    }
+    p {
+        margin-bottom: 0;
+        line-height: normal;
+    }
+    .item-price {
+        font-size: $font-size-body-small;
+    }
+}
+.button-close {
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/ico_close.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid black;
+    background-size: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+// Custom Element End
+
+.header {
+    background-color: $color-orange;
+    color: $color-white;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    .logo {
+        padding: 0;
+        margin: 0;
+        li {
+            list-style: none;
+            display: inline-block;
+            vertical-align: middle;
+            .logo-sub {
+                display: inline-block;
+                margin-right: 5px;
+                img {
+                    max-height: 35px;
+                }
+                
+            }
+            .logo-main {
+                display: inline-block;
+                img {
+                    max-height: 30px;
+                }
+            }
+        }
+    }
+    .bar {
+        padding: 0;
+        margin: 0;
+        text-align: right;
+        li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+            .bar-notif {
+                display: inline-block;
+                img {
+                    max-height: 30px;
+                }
+            }
+            .bar-profile {
+                display: inline-block;
+                img {
+                    max-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+.search-bar-space-top {
+    position: relative;
+    display: block;
+    height: 20px;
+    background-color: $color-orange;
+}
+.search-bar-space-bottom {
+    position: relative;
+    display: block;
+    height: 20px;
+    background-color: $color-brown;
+}
+
+.search-bar {
+    position: absolute;
+    width: auto;
+    top: -20px;
+    left: 15px;
+    right: 15px;
+    z-index: 9;
+    &::before {
+        content: '';
+        position: absolute;
+        background: url(../images/ico_search.png) no-repeat center center;
+        height: 20px;
+        width: 20px;
+        right: 28px;
+        top: 50%;
+        transform: translate(0, -50%);
+        background-size: contain;
+        z-index: 99;
+    }
+}
+
+.content-wrapper {
+    color: $color-white;
+    padding-top: 20px;
+    padding-bottom: 90px;
+    .section-heading {
+        margin-bottom: 20px;
+        font-size: $font-size-heading;
+    }
+    .page-heading {
+        border-left: 2px solid $color-orange;
+        font-weight: bold;
+        padding-left: 7px;
+        margin: 0;
+    }
+    .heading-link {
+        color: $color-yellow;
+    }
+    .category-button {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        display: block;
+        white-space: nowrap;
+        overflow-x: scroll;
+        li {
+            list-style: none;
+        }
+    }
+}
+.slide-competititon {
+    margin-bottom: 25px;
+    .slide-competititon-box {
+        width: 330px;
+        margin-right: 10px;
+    }
+}
+
+.slide-competititon-box {
+    background-color: $color-white;
+    border-radius: 10px;
+    position: relative;
+    a {
+        color: $color-white;
+    }
+    .combox-status {
+        position: absolute;
+        top: 0;
+        background-color: $color-orange;
+        padding: 5px 8px;
+        border-radius: 10px 0 10px 0;
+        img {
+            display: inline-block;
+            max-width: 10px;
+            margin-right: 3px;
+            vertical-align: middle;
+        }
+    }
+    .combox-cover {
+        img {
+            border-radius: 10px 10px 0 0;
+            width: 100%;
+        }
+    }
+    .media {
+        margin-top: -30px;
+        padding: 10px;
+        img {
+            max-width: 90px;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .media-body {
+            margin-top: 25px;
+        }
+        .combox-game-title {
+            color: $color-black;
+            font-size: $font-size-heading;
+            margin-bottom: 0;
+            line-height: normal;
+            font-weight: normal;
+        }
+        .combox-category {
+            font-size: $font-size-body;
+            color: $color-grey;
+            span {
+                &::after {
+                    content: "•";
+                    color: $color-grey;
+                    margin-left: 3px;
+                }
+                &:last-child {
+                    &::after {
+                        content: none;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        .combox-date {
+            font-size: $font-size-body;
+            color: $color-grey;
+        }
+    }
+    .combox-prize {
+        padding: 10px;
+        border-top: 1px solid rgba($color-grey, 0.3);
+        .combox-prize-wrapper {
+            width: 75px;
+            max-width: 100%;
+            height: 70px;
+            background-image: url(../images/bg_prize.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            text-align: center;
+            margin-right: 2px;
+            position: relative;
+            .badge-prize {
+                width: 25px;
+                position: absolute;
+                left: 2px;
+                top: 2px;
+                img {
+                    height: auto;
+                    margin: 0;
+                }
+            }
+            img {
+                display: inline-block;
+                height: 50px;
+                margin-top: 5px;
+                width: auto;
+            }
+        }
+    }
+    .combox-description {
+        padding: 10px 10px 15px 10px;
+        border-top: 1px solid rgba($color-grey, 0.3);
+        color: $color-grey;
+        font-size: $font-size-body;
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .combox-btn {
+        background-color: $color-green;
+        color: $color-white;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        &.disabled {
+            background-color: lighten($color-grey, 20%);
+            color: darken($color-grey, 8%);
+            cursor: crosshair;
+            &:hover,
+            &:focus {
+                outline: none;
+                background-color: lighten($color-grey, 20%);
+                color: darken($color-grey, 8%);
+            }
+        }
+        &:hover,
+        &:focus {
+            outline: none;
+            background-color: darken($color-green, 5%);
+        }
+    }
+}
+
+.game-list-wrapper {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.game-item {
+    padding: 5px;
+    margin-bottom: 10px;
+    a {
+        color: $color-white;
+    }
+    .game-item-pic {
+        border-radius: 10px;
+    }
+    .game-item-title {
+        font-size: $font-size-body-small;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    .game-item-star {
+        height: 12px;
+        display: block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        &.star-full {
+            background-image: url(../images/star_full.png);
+        }
+        &.star-fourth {
+            background-image: url(../images/star_fourth.png);
+        }
+        &.star-third {
+            background-image: url(../images/star_third.png);
+        }
+        &.star-two {
+            background-image: url(../images/star_two.png);
+        }
+        &.star-one {
+            background-image: url(../images/star_one.png);
+        }
+    }
+}
+
+.section-divider {
+    background-color: $color-black-more;
+    height: 5px;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.banner-ads {
+    margin-bottom: 20px;
+}
+
+.app-box-wrapper {
+    color: $color-black;
+    background-color: $color-white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    .app-item {
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba($color-grey, 0.3);
+        padding-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        img {
+            max-width: 65px;
+            height: auto;
+        }
+        .app-item-title {
+            font-size: $font-size-body;
+            margin-bottom: 7px;
+        }
+        .app-item-star {
+            height: 12px;
+            display: block;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-bottom: 3px;
+            &.star-full {
+                background-image: url('../images/star_full.png');
+            }
+        }
+        .app-item-pricing {
+            margin: 0;
+        }
+    }
+}
+
+.content-slider {
+    .content-item {
+        max-width: 110px;
+        margin-right: 10px;
+    }
+}
+
+.content-video-wrapper {
+    .content-item {
+        max-width: 290px;
+        margin-right: 10px;
+    }
+}
+
+.content-item {
+    padding: 5px;
+    display: block;
+    margin-bottom: 10px;
+    a {
+        color: inherit;
+        &:focus {
+            outline: none;
+        }
+    }
+    &.video {
+        .content-thumbnail {
+            position: relative;
+            &::before {
+                content: '';
+                border-radius: 10px;
+                position: absolute;
+                background-color: rgba($color-black-more, 0.5);
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-image: url(../images/play-button.png);
+                background-repeat: no-repeat;
+                background-size: 50px;
+                background-position: center center;
+            }
+        }
+    }
+    img {
+        border-radius: 10px;
+    }
+    .content-item-title {
+        font-size: $font-size-body;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-weight: normal;
+        a {
+            color: $color-white;
+        }
+    }
+    .content-item-category {
+        font-size: $font-size-body-small;
+        color: $color-secondary;
+    }
+    .content-item-star {
+        height: 12px;
+        padding-top: 2px;
+        display: block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        &.star-full {
+            background-image: url(../images/star_full.png);
+        }
+        &.star-fourth {
+            background-image: url(../images/star_fourth.png);
+        }
+        &.star-third {
+            background-image: url(../images/star_third.png);
+        }
+        &.star-two {
+            background-image: url(../images/star_two.png);
+        }
+        &.star-one {
+            background-image: url(../images/star_one.png);
+        }
+    }
+}
+
+.bottom-nav {
+    background-color: $color-yellow;
+    color: $color-black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    .col {
+        margin-left: 2px;
+        margin-right: 2px;
+        width: 20%;
+    }
+    .active {
+        .nav-box {
+            background-color: $color-orange;
+            color: $color-white;
+            a {
+                color: $color-white;
+            }
+            .nav-box-ico {
+                &.home {
+                    background-image: url('../images/ico_console_white.png');
+                }
+                &.competition {
+                    background-image: url('../images/ico_trophy_white.png');
+                }
+                &.html5 {
+                    background-image: url('../images/ico_html5_white.png');
+                }
+                &.content {
+                    background-image: url('../images/ico_content_white.png');
+                }
+                &.profile {
+                    background-image: url('../images/ico_user_white.png');
+                }
+            }
+        }
+    }
+    .nav-box {
+        text-align: center;
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        border-radius: 10px;
+        a {
+            color: $color-black;
+            display: block;
+        }
+        .nav-box-ico {
+            height: 22px;
+            margin-bottom: 5px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            &.home {
+                background-image: url('../images/ico_console.png');
+            }
+            &.competition {
+                background-image: url('../images/ico_trophy.png');
+            }
+            &.html5 {
+                background-image: url('../images/ico_html5.png');
+            }
+            &.content {
+                background-image: url('../images/ico_content.png');
+            }
+            &.profile {
+                background-image: url('../images/ico_user.png');
+            }
+        }
+        .nav-title {
+            font-size: 10px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin: 0;
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.custom-tabs {
+    padding-top: 20px;
+    background-color: $color-tabs;
+    .nav-tabs {
+        border-bottom: none;
+        .nav-item {
+            margin: 0;
+            &:first-child {
+                .nav-link {
+                    margin-left: 15px;
+                    margin-right: 5px;
+                }
+            }
+            &:last-child {
+                .nav-link {
+                    margin-right: 15px;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .nav-link {
+            background-color: $color-secondary-alt;
+            color: $color-secondary;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            text-transform: uppercase;
+            font-size: $font-size-body-small;
+            &.active {
+                background-color: $color-brown;
+                border-color: $color-brown;
+                color: $color-white;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+                outline: none;
+                border: 1px solid $color-brown;
+            }
+        }
+    }
+}
+.custom-nav {
+    margin-bottom: 20px;
+    .nav-item {
+        &:nth-child(2) {
+            margin-left: 7px;
+            margin-right: 7px;
+        }
+        .nav-link {
+            // background-color: $color-secondary;
+            border-color: $color-secondary;
+            color: $color-secondary;
+            padding: .25rem 1rem;
+            border-radius: 25px;
+            border-width: 1px;
+            border-style: solid;
+            &:hover,
+            &:focus {
+                color: $color-white;
+                border-color: darken($color-orange, 5%);
+                background-color: darken($color-orange, 5%);
+            }
+            &.active {
+                background-color: $color-orange;
+                border-color: $color-orange;
+                color: $color-white;
+            }
+        }
+    }
+    .col-4 {
+        padding-left: 5px;
+        padding-right: 5px;
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.loading {
+    position: fixed;
+    background-color: $color-white;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 999;
+    display: flex;
+}
+
+.pick-date-wrapper {
+    margin-bottom: 20px;
+    .pick-date-item {
+        margin-right: 10px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 20px;
+            background-image: url('../images/ico_calendar.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            right: 5px;
+            top: 8px;
+        }
+        input {
+            padding-right: 35px;
+        }
+    }
+}
+
+.competition-winner-box {
+    background-color: $color-white;
+    border-radius: 10px;
+    color: $color-black;
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.competition-info {
+    padding: 10px;
+    border-bottom: 1px solid rgba($color-black-more, 0.2);
+    .media {
+        img {
+            max-width: 90px;
+            width: 100%;
+        }
+        .cominfo-game-title {
+            color: $color-black;
+            font-size: $font-size-body;
+            margin-bottom: 0;
+            line-height: normal;
+            font-weight: normal;
+        }
+        .cominfo-category {
+            font-size: $font-size-body-small;
+            color: $color-grey;
+            span {
+                &::after {
+                    content: "•";
+                    color: $color-grey;
+                    margin-left: 3px;
+                }
+                &:last-child {
+                    &::after {
+                        content: none;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        .cominfo-date {
+            font-size: $font-size-body-small;
+            color: $color-grey;
+        }
+    }
+}
+
+.winner-list-item {
+    padding: 15px 10px;
+    &:nth-child(even) {
+        background-color: rgba($color-grey, 0.2);
+    }
+    .winner-list-item-pic {
+        position: relative;
+        img {
+            max-width: 65px;
+        }
+        .winner-list-item-badge {
+            width: 25px;
+            position: absolute;
+            right: 0;
+            bottom: -5px;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    .media-body {
+        max-width: 40%;
+    }
+    .winner-list-item-name {
+        font-size: $font-size-body;
+        font-weight: normal;
+        margin-bottom: 2px;
+    }
+    .winner-list-item-point {
+        color: $color-grey;
+        font-size: $font-size-body-small;
+        margin-bottom: 0;
+        .ico-coin {
+            display: inline;
+            img {
+                width: 15px;
+                max-width: 100%;
+                margin-top: -3px;
+            }
+        }
+    }
+    .winner-list-item-date {
+        color: $color-grey;
+        font-size: $font-size-body-small;
+        margin-bottom: 0;
+    }
+    .winner-list-item-prize {
+        width: 75px;
+        max-width: 100%;
+        height: 70px;
+        background-image: url(../images/bg_prize.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        margin-left: auto;
+        img {
+            display: inline-block;
+            height: 50px;
+            margin-top: 5px;
+            width: auto;
+        }
+    }
+}
+
+.header-profile {
+    padding: 18px 0 50px 0;
+    background-color: $color-orange;
+    color: $color-white;
+    .heading-profile-pic {
+        border-radius: 50%;
+        width: 65px;
+    }
+    .heading-profile-title {
+        font-size: 21px;
+        font-weight: normal;
+        margin-bottom: 5px;
+    }
+    .heading-profile-phone {
+        margin-bottom: 10px;
+    }
+}
+
+.header-title {
+    background-color: $color-orange;
+    color: $color-white;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    .header-title-back {
+        width: auto;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-right: 5px;
+        display: inline-block;
+        img {
+            display: block;
+            width: 10px;
+        }
+    }
+}
+
+.profile-info-shortcut {
+    margin-top: -30px;
+    margin-bottom: 20px;
+    .col-6 {
+        &:first-child {
+            padding-right: 5px;
+        }
+        &:last-child {
+            padding-left: 5px;
+        }
+    }
+}
+
+.custom-menu-list {
+    padding: 0 20px;
+    background-color: $color-white;
+    color: $color-black;
+    border-radius: 10px;
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            border-bottom: 1px solid rgba($color-grey, 0.2);
+            &:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                color: $color-black;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            .ico-menu-list {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+                margin-right: 10px;
+                &.setting {
+                    background-image: url('../images/ico_setting.png');
+                }
+                &.question {
+                    background-image: url('../images/ico_question.png');
+                }
+                &.exc {
+                    background-image: url('../images/ico_exc.png');
+                }
+                &.exit {
+                    background-image: url('../images/ico_exit.png');
+                }
+            }
+        }
+    }
+
+}
+
+.leaderboard-box {
+    background-color: $color-white;
+    border-radius: 10px;
+    margin-top: 40px;
+    color: $color-black;
+    .leaderboard-box-heading {
+        padding: 10px;
+        background-color: rgba($color-grey, 0.2);
+        text-align: center;
+        h5 {
+            font-weight: normal;
+            font-size: $font-size-body;
+        }
+        .icon-champ {
+            background-color: $color-yellow;
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-top: -30px;
+            margin-bottom: 5px;
+            img {
+                width: 23px;
+            }
+        }
+    }
+    .leaderboard-box-content {
+        padding: 0;
+        margin: 0;
+        .leaderboard-box-winner {
+            list-style: none;
+            padding: 15px 13px;
+            &.user-profile {
+                background-color: rgba($color-yellow, 0.25);
+            }
+            &:nth-child(even) {
+                background-color: rgba($color-grey, 0.2);
+            }
+            .media-body {
+                max-width: 50%;
+            }
+            .leaderboard-box-winner-number {
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                color: $color-white;
+                background-color: $color-asphalt;
+                margin-right: 10px;
+                font-size: 12px;
+                border-radius: 50%;
+                display: inline-block;
+            }
+            .leaderboard-box-winner-pic {
+                position: relative;
+                img {
+                    max-width: 55px;
+                }
+            }
+            .leaderboard-box-winner-name {
+                font-size: $font-size-body;
+                font-weight: normal;
+                margin-bottom: 2px;
+            }
+            .leaderboard-box-winner-point {
+                font-size: $font-size-body-small;
+                margin-bottom: 0;
+                color: $color-grey;
+                .ico-coin {
+                    display: inline;
+                    img {
+                        width: 15px;
+                        max-width: 100%;
+                        margin-top: -3px;
+                    }
+                }
+            }
+            .main-success-outline-btn {
+                font-size: 12px;
+            }
+        }
+    }
+    .leaderboard-box-more {
+        padding: 15px 13px;
+    }
+}
+
+.result-game-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: rgba($color-black-more, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/splash_bg.png');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center center;
+    .result-game-content {
+        text-align: center;
+        font-weight: bold;
+        color: $color-white;
+        font-size: 42px;
+        text-transform: uppercase;
+        line-height: normal;
+        p {
+            margin-bottom: 5px;
+            &.color-yellow {
+                color: $color-yellow;
+                text-shadow: 0 3px 6px rgba($color-black-more, 0.2);
+            }
+        }
+    }
+}
+
+.game-detail-box {
+    background-color: $color-white;
+    color: $color-black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    .game-detail-box-header {
+        padding: 13px;
+        background-color: rgba($color-grey, 0.3);
+        position: relative;
+        .media {
+            img {
+                max-width: 60px;
+                border-radius: 10px;
+            }
+        }
+        .game-detail-box-title {
+            font-size: $font-size-body;
+            font-weight: normal;
+        }
+        .game-detail-star {
+            height: 12px;
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right;
+            position: absolute;
+            bottom: 10px;
+            width: 90px;
+            right: 0;
+            &.star-full {
+                background-image: url(../images/star_full.png);
+            }
+            &.star-fourth {
+                background-image: url(../images/star_fourth.png);
+            }
+            &.star-third {
+                background-image: url(../images/star_third.png);
+            }
+            &.star-two {
+                background-image: url(../images/star_two.png);
+            }
+            &.star-one {
+                background-image: url(../images/star_one.png);
+            }
+        }
+    }
+    .game-detail-box-content {
+        padding: 13px;
+        font-size: $font-size-body-small;
+    }
+    .game-pic-slide {
+        margin-bottom: 20px;
+        .game-pic-item {
+            max-width: 120px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.game-rating-box {
+    padding: 13px;
+    color: $color-black;
+    background-color: $color-white;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    .game-rating-box-title {
+        margin-bottom: 10px;
+    }
+    .game-rating-box-input {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        span {
+            float: right;
+            position: relative;
+            input {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                opacity: 0;
+           }
+            label {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                color: $color-white;
+                background: url('../images/ico_star_empty.png') no-repeat center center;
+                background-size: contain;
+                font-size: 30px;
+                margin-left: 2px;
+                margin-right: 2px;
+                line-height: 30px;
+                border-radius: 50%;
+                margin-top: 0;
+                margin-bottom: 0;
+           }
+       }
+        span:hover ~ span label,
+        span:hover label,
+        span.checked label,
+        span.checked ~ span label {
+            background: url('../images/ico_star_filled.png') no-repeat center center;
+            background-size: contain;
+            color: $color-white;
+        }
+    }
+}
+
+.body-login {
+    background-color: $color-orange;
+}
+
+.login-wrapper {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .login-logo {
+        margin-bottom: 20px;
+        text-align: center;
+        img {
+            width: 190px;
+        }
+    }
+    .login-box {
+        background-color: $color-white;
+        border-radius: 10px;
+        padding: 25px 32px;
+        margin-bottom: 20px;
+        .login-heading {
+            margin-bottom: 25px;
+        }
+        .form-group {
+            color: $color-grey;
+            label {
+                margin-bottom: 0;
+            }
+            input {
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 1px solid rgba($color-black-more, 0.15);
+                border-radius: 0;
+                padding-left: 0;
+                padding-right: 0;
+                &.form-control {
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+        .form-check {
+            margin-bottom: 20px;
+        }
+        .btn-success {
+            background-color: $color-green;
+            box-shadow: 0 5px 6px rgba($color-black-more, 0.15);
+            border: none;
+            padding: 13px 10px;
+            color: $color-white;
+            text-decoration: none;
+            &:hover,
+            &:focus {
+                color: $color-white;
+                background-color: darken($color-green, 10%);
+            }
+
+        }
+        .login-box-bottom-link {
+            margin-bottom: 0;
+            margin-top: 20px;
+            a {
+                padding-bottom: 2px;
+                border-bottom: 1px solid rgba($color-black-more, 0.5);
+            }
+        }
+    }
+    .login-bottom {
+        color: $color-white;
+        a {
+            color: $color-yellow;
+        }
+    }
+}
+
+.content-space-orange {
+    width: 100%;
+    height: 100px;
+    background-color: $color-orange;
+    margin-bottom: -100px;
+}
+
+.content-media-box {
+    color: $color-black;
+    .content-media-box-info {
+        img {
+            border-radius: 10px 10px 0 0;
+            width: 100%;
+        }
+        a {
+            position: relative;
+            display: block;
+            margin-bottom: 10px;
+            &.video {
+                &::before {
+                    content: '';
+                    border-radius: 10px;
+                    position: absolute;
+                    background-color: rgba($color-black-more, 0.3);
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-image: url(../images/play-button.png);
+                    background-repeat: no-repeat;
+                    background-size: 50px;
+                    background-position: center center;
+                    z-index: 99;
+                }
+            }
+        }
+        padding: 10px;
+        background-color: $color-white;
+        border-radius: 10px 10px 0 0;
+        p {
+            margin: 0;
+        }
+    }
+    .content-media-box-cat {
+        padding: 10px;
+        background-color: $color-yellow;
+        border-radius: 0 0 10px 10px;
+        label {
+            font-size: $font-size-body-small;
+            margin-bottom: 5px;
+        }
+        .btn {
+            font-size: $font-size-body-small;
+        }
+    }
+}
+
+.notif-box {
+    background-color: $color-white;
+    padding: 13px;
+    border-radius: 10px;
+    color: $color-black;
+    margin-bottom: 10px;
+    h5 {
+        font-weight: normal;
+        font-size: $font-size-body-small;
+        margin-bottom: 3px;
+    }
+    p {
+        color: $color-grey;
+        font-size: $font-size-body-small;
+        .date {
+            color: $color-black;
+        }
+    }
+    .notif-box-ico {
+        height: 42px;
+        width: 42px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 50%;
+        margin-right: 10px;
+        background-size: 25px;
+        background-repeat: no-repeat; 
+        background-position: center center;
+        &.green {
+            background-color: $color-green;
+            background-image: url('../images/ico_smartphone.png');
+        }
+        &.red {
+            background-color: $color-red;
+            background-image: url('../images/ico_basket.png');
+        }
+        &.yellow {
+            background-color: $color-yellow;
+            background-image: url('../images/ico_champ_outline.png');
+        }
+    }
+}
+
+.history-box {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid $color-black-more;
+    img {
+        width: 55px;
+        border-radius: 10px;
+    }
+    h5 {
+        font-weight: normal;
+        font-size: $font-size-body-small;
+        margin-bottom: 3px;
+    }
+    p {
+        color: $color-grey;
+        font-size: $font-size-body-small;
+        .date {
+            color: $color-black;
+        }
+    }
+}
+
+.welcome-slide {
+    color: $color-white;
+    width: 90%;
+    margin: 0 auto;
+    .welcome-image {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    .welcome-dots {
+        margin-top: 10px;
+        padding: 0;
+        text-align: center;
+        li {
+            list-style: none;
+            display: inline-block;
+            .dots {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $color-white;
+                display: inline-block;
+            }
+            &.active {
+                .dots {
+                    background-color: $color-yellow;
+                }
+            }
+        }
+    }
+    .welcome-content {
+        text-align: center;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        h5 {
+            font-size: $font-size-heading;
+        }
+    }
+    .welcome-nav {
+        .btn {
+            border-radius: 10px;
+            box-shadow: 0 5px 6px rgba($color-black-more, 0.05);
+        }
+    }
+}
+
+.additional-content-box {
+    padding: 13px;
+    border-radius: 10px;
+    background-color: $color-white;
+    color: $color-black;
+}
+
+.profile-avatar-box {
+    display: inline-block;
+    margin-bottom: 10px;
+    img {
+        width: 100px;
+        max-width: 100%;
+        border-radius: 50%;
+    }
+}
+
+.profile-setting-box {
+    background-color: $color-white;
+    border-radius: 10px;
+    padding: 25px 32px;
+    margin-bottom: 20px;
+    .form-group {
+        color: $color-grey;
+        label {
+            margin-bottom: 0;
+        }
+        input {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid rgba($color-black-more, 0.15);
+            border-radius: 0;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 5px;
+            &.form-control {
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    .btn-success {
+        background-color: $color-green;
+        box-shadow: 0 5px 6px rgba($color-black-more, 0.15);
+        border: none;
+        padding: 13px 10px;
+        color: $color-white;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            color: $color-white;
+            background-color: darken($color-green, 10%);
+        }
+
+    }
+}
